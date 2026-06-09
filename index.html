@@ -1,1179 +1,1167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-<!-- snow	  <script>
-		// Set the number of snowflakes (more than 30 - 40 not recommended)
-var snowmax=60
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermostar – Professional Dry Steam Cleaning System | UK</title>
+  <meta name="description" content="Thermostar dry steam cleaning system – professional technology for your home. No chemicals, lifelong warranty, steam at 190°C. UK authorised distributor.">
 
-// Set the colors for the snow. Add as many colors as you like
-var snowcolor=new Array("#b9dff5","#b9dff5","#b9dff5","#b9dff5","#b9dff5")
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ET6VCH2915"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ET6VCH2915');
+  </script>
 
-// Set the fonts, that create the snowflakes. Add as many fonts as you like
-var snowtype=new Array("Times")
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (self-hosted) -->
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
 
-// Set the letter that creates your snowflake (recommended: * )
-var snowletter="*"
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
 
-// Set the speed of sinking (recommended values range from 0.3 to 2)
-var sinkspeed=0.8
-
-// Set the maximum-size of your snowflakes
-var snowmaxsize=30
-
-// Set the minimal-size of your snowflakes
-var snowminsize=12
-
-// Set the snowing-zone
-// Set 1 for all-over-snowing, set 2 for left-side-snowing
-// Set 3 for center-snowing, set 4 for right-side-snowing
-var snowingzone=1
-
-///////////////////////////////////////////////////////////////////////////
-// CONFIGURATION ENDS HERE
-///////////////////////////////////////////////////////////////////////////
-
-
-// Do not edit below this line
-var snow=new Array()
-var snowi=new Array()
-var marginbottom
-var marginright
-var timer
-var i_snow=0
-var x_mv=new Array();
-var crds=new Array();
-var lftrght=new Array();
-var browserinfos=navigator.userAgent
-var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
-var ns6=document.getElementById&&!document.all
-var opera=browserinfos.match(/Opera/)
-var browserok=ie5||ns6||opera
-
-function randommaker(range) {
-        rand=Math.floor(range*Math.random())
-    return rand
-}
-
-function initsnow() {
-        if (ie5 || opera) {
-                marginbottom = document.body.scrollHeight
-                marginright = document.body.clientWidth-15
-        }
-        else if (ns6) {
-                marginbottom = document.body.scrollHeight
-                marginright = window.innerWidth-15
-        }
-        var snowsizerange=snowmaxsize-snowminsize
-        for (i=0;i<=snowmax;i++) {
-                crds[i] = 0;
-            lftrght[i] = Math.random()*15;
-            x_mv[i] = 0.03 + Math.random()/10;
-                snow[i]=document.getElementById("s"+i)
-				snowi[i]=document.getElementById("si"+i)
-                snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
-                snow[i].size=randommaker(snowsizerange)+snowminsize
-				//alert(snow[i].size);
-                snowi[i].style.width=snow[i].size+'px';
-                snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
-                snow[i].style.zIndex=1000
-                snow[i].sink=sinkspeed*snow[i].size/5
-                if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
-                if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
-                if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
-                if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
-                snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
-                snow[i].style.left=snow[i].posx+'px';
-                snow[i].style.top=snow[i].posy+'px';
-        }
-        movesnow()
-}
-
-function movesnow() {
-        for (i=0;i<=snowmax;i++) {
-                crds[i] += x_mv[i];
-                snow[i].posy+=snow[i].sink
-                snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i])+'px';
-                snow[i].style.top=snow[i].posy+'px';
-
-                if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
-                        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
-                        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
-                        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
-                        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
-                        snow[i].posy=0
-                }
-        }
-        var timer=setTimeout("movesnow()",50)
-}
-
-for (i=0;i<=snowmax;i++) {
-        document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'><img src='http://gorod.kharkov.ua/pic/snow.png' id='si"+i+"'></span>")
-}
-if (browserok) {
-        window.onload=initsnow
-}  
-	  </script>-->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ET6VCH2915"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ET6VCH2915');
-</script>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-    <title>Thermostar UK</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-    
-      @media (max-width: 576px) {.thermostar-machine{
-        width: 200px
-      }}
-    </style>
-  </head>
- <body>
-  
-<nav class="navbar sticky-top navbar-expand-lg navbar-light py-0" style="background-color:#C0BDC9">
-  <a class="navbar-brand" href="#"><img src="images/logo.png" style="max-width:100px;"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Thermostar
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="accessories/">Accessories</a>
-          <a class="dropdown-item" href="#Applications" data-toggle="modal" data-target="#Applications">Applications</a>
-          <a class="dropdown-item" href="#DrySteamAdvantage" data-toggle="modal" data-target="#DrySteamAdvantage">Dry Steam Advantages</a>
-           <a class="dropdown-item" href="#DrySteamProducts" data-toggle="modal" data-target="#DrySteamProducts">Dry Steam Products</a>
-           <a class="dropdown-item" href="#EnT" data-toggle="modal" data-target="#EnT">Equipment and Tools</a>
-             <a class="dropdown-item" href="#Warranty" data-toggle="modal" data-target="#Warranty">Lifelong Restoration Warranty</a>
-              <a class="dropdown-item" href="#ProductsForLife" data-toggle="modal" data-target="#ProductsForLife">Products for Life</a>
-              <a class="dropdown-item" href="#ThermostarTechnology" data-toggle="modal" data-target="#ThermostarTechnology">Thermostar Technology</a>
-              <a class="dropdown-item" href="#UserManual" data-toggle="modal" data-target="#UserManual">User Manual</a>
-        </div>
-      </li>
-<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          The company
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#History" data-toggle="modal" data-target="#History">History</a>
-          <a class="dropdown-item" href="#Philosophy" data-toggle="modal" data-target="#Philosophy">Philosophy</a>
-        </div>
-      </li>
- <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Videos</a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="#ProductVideo" data-toggle="modal" data-target="#ProductVideo">Product Video</a>
-          <a class="dropdown-item" href="#TechnologyVideo" data-toggle="modal" data-target="#TechnologyVideo">Technology Video</a>
-          <a class="dropdown-item" href="#ApplicationVideo" data-toggle="modal" data-target="#ApplicationVideo">Application Video</a>
-          <a class="dropdown-item" href="#SteamIronVideo" data-toggle="modal" data-target="#SteamIronVideo">Steam Iron Station Video</a>
-          <a class="dropdown-item" href="#TrainingVideo" data-toggle="modal" data-target="#TrainingVideo">Training Video</a>
-        </div>
-  <li class="nav-item">
-      <a class="nav-link" href="#contactus" data-toggle="modal" data-target="#ContactUs">Buy it now!</a>
-    </li>
-    </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Cleanliness for a lifetime!</a>
-      </li>
-    </ul>
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container-xl">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Thermostar" height="46">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto me-4 align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#applications">Applications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#technology">Technology</a></li>
+        <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#company">Company</a></li>
+        <li class="nav-item"><a class="nav-link" href="accessories/">Accessories</a></li>
+      </ul>
+      <a href="tel:+442035448303" class="ts-nav-phone me-3 d-none d-lg-inline">
+        <i class="bi bi-telephone-fill me-1"></i>020 3544 8303
+      </a>
+      <button class="ts-btn ts-btn-primary" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+        Enquire Now
+      </button>
+    </div>
   </div>
 </nav>
-<div class="embed-responsive embed-responsive-16by9" alt="Video">
-  <video playsinline loop="true" autoplay="autoplay" id="vid" muted>
-  <source src="video/thermostar-video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-  <script>
-    document.getElementById('vid').play();
-</script>
-</div>
-<div class="container">
+
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="hero">
+  <video autoplay muted loop playsinline class="ts-hero-video">
+    <source src="video/thermostar-video.mp4" type="video/mp4">
+  </video>
+  <div class="ts-hero-overlay"></div>
+  <div class="container-xl ts-hero-content">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 text-center">
-               <h1>Thermostar Dry Steam System</h1>
-<h1>More than just a steam cleaner!</h1>
-    <p>The Thermostar is an optimum handy household appliance with the performance and technology of an industrial appliance. It offers you an enormous amount of relief whilst cleaning and allows for many different application options through its extensive accessories. Quite simply, cleaning has never been as easy as with Thermostar.</p>
-    <p>You will quickly notice that you are able to clean areas in your household in a much faster way. Whether it be stubborn stains on carpets, lime residues on tiles or grease stains on the sofa. With the <a href="#dsp" data-toggle="modal" data-target="#DrySteamProducts">Thermostar Dry Steam Cleaner</a>, you can remove these stains completely. You can use it everywhere in your entire household, providing you with sparkling and pore-deep cleanliness inside your own four walls. It is not only suitable for your home, but also for cars, bicycles, terraces, staircases, garden furniture and many other applications too.</p>
+      <div class="col-lg-7">
+        <span class="ts-eyebrow">Professional Dry Steam Technology</span>
+        <h1 class="ts-hero-title">Thermostar<br>Dry Steam System</h1>
+        <p class="ts-hero-subtitle">More than just a steam cleaner. Industrial-grade technology, engineered for your home. No chemicals. Lifelong warranty.</p>
+        <div class="d-flex gap-3 flex-wrap mt-4">
+          <button class="ts-btn ts-btn-primary ts-btn-lg" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+            Book Free Demo
+          </button>
+          <a href="#videos" class="ts-btn ts-btn-outline-white ts-btn-lg">
+            <i class="bi bi-play-circle-fill"></i> Watch Video
+          </a>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-         <div class="d-flex justify-content-center">
-   <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fthermostar.uk%2F&tabs=timeline&width=300&height=370&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture;"></iframe>
+      </div>
+    </div>
+  </div>
+  <a href="#stats" class="ts-scroll-cue"><i class="bi bi-chevron-down"></i></a>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     TICKER
+══════════════════════════════════════ -->
+<div class="ts-ticker" aria-hidden="true">
+  <div class="ts-ticker-inner">
+    <span class="ts-ticker-item">No Chemicals</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Steam at 190°C</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">European Quality</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Lifelong Warranty</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Self-Decalcifying</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">100,000+ Units Sold</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Kills Bacteria &amp; Germs</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Cleanliness for a Lifetime</span><span class="ts-ticker-sep">•</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ts-ticker-item">No Chemicals</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Steam at 190°C</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">European Quality</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Lifelong Warranty</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Self-Decalcifying</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">100,000+ Units Sold</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Kills Bacteria &amp; Germs</span><span class="ts-ticker-sep">•</span>
+    <span class="ts-ticker-item">Cleanliness for a Lifetime</span><span class="ts-ticker-sep">•</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     STATS
+══════════════════════════════════════ -->
+<section id="stats" class="ts-section-sm ts-section-light">
+  <div class="container-xl">
+    <div class="row g-4 text-center ts-reveal">
+      <div class="col-6 col-md-3 ts-reveal ts-reveal-delay-1">
+        <div class="ts-stat-num">100K+</div>
+        <div class="ts-stat-lbl">Units Sold Worldwide</div>
+      </div>
+      <div class="col-6 col-md-3 ts-reveal ts-reveal-delay-2">
+        <div class="ts-stat-num">190°C</div>
+        <div class="ts-stat-lbl">Steam Temperature</div>
+      </div>
+      <div class="col-6 col-md-3 ts-reveal ts-reveal-delay-3">
+        <div class="ts-stat-num">30+</div>
+        <div class="ts-stat-lbl">Years of Innovation</div>
+      </div>
+      <div class="col-6 col-md-3 ts-reveal ts-reveal-delay-4">
+        <div class="ts-stat-num">∞</div>
+        <div class="ts-stat-lbl">Lifelong Spare Parts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section id="about" class="ts-section">
+  <div class="container-xl">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center ts-reveal">
+        <img src="images/thermostar-transparent.png" alt="Thermostar Dry Steam Cleaner" class="img-fluid ts-product-img-hero">
+      </div>
+      <div class="col-lg-7 ts-reveal ts-reveal-delay-1">
+        <span class="ts-label">What is Thermostar?</span>
+        <h2 class="ts-h2">The Ultimate Home<br>Cleaning System</h2>
+        <p class="ts-body">The Thermostar is an optimum handy household appliance with the performance and technology of an industrial appliance. It offers enormous relief whilst cleaning and allows for many different applications through its extensive accessories.</p>
+        <p class="ts-body">Whether stubborn stains on carpets, lime residues on tiles or grease on the sofa — with Thermostar you can remove these completely. No chemicals. No harsh products. Just pure, dry steam.</p>
+        <ul class="ts-checklist mt-4">
+          <li>Beds, mattresses, carpets and upholstery</li>
+          <li>Bathrooms, kitchens, glass &amp; tiles</li>
+          <li>Cars, bicycles and garden furniture</li>
+          <li>No chemicals — steam at up to 190°C kills bacteria</li>
+        </ul>
+        <div class="d-flex gap-3 flex-wrap mt-4">
+          <button class="ts-btn ts-btn-primary" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+            Book a Free Demo
+          </button>
+          <a href="accessories/" class="ts-btn ts-btn-sm" style="border:1.5px solid var(--ts-border);color:var(--ts-text);border-radius:50px;">
+            View Accessories
+          </a>
         </div>
-         </div>
+      </div>
     </div>
-</div>
-<br>
-<div class="container" alt="you can clean">
-<div class="row">
-      <div class="col-sm-4 text-center" >
-        <img src="images/thermostar-transparent.png" alt="Thermostar" class="img-fluid thermostar-machine">
-      </div>
-     <div class="col-sm-8">
-        <h1>With Thermostar Dry Steam System, you can clean:</h1>
-        <ul><li>Beds, upholstery, mattresses, carpets and sofas</li><li>Flat surfaces in the living room, children’s rooms and offices</li><li>Bathrooms and toilets</li><li>Kitchens</li><li>Glass doors, windows and blinds</li><li>Gardens</li><li>Cars and bicycles</li></ul>
-        <h1>Hygienically clean –<a href="#pfl" data-toggle="modal" data-target="#ProductsForLife"> for a lifetime!</a></h1>
-     </div>
-</div>
-</div>
-
-<div class="jumbotron" style="background-color:#C0BDC9" alt="ENQUIRE NOW">
-  <div class="container text-center">
-  <h1>Do you want to know more?</h1>
-  <a class="btn btn-primary" href="#contactus" data-toggle="modal" data-target="#ContactUs" role="button">ENQUIRE NOW</a>
   </div>
-</div>
-
-<div class="container-fluid" style="background-color:#008BBA">
-<div class="row">
-      <div class="embed-responsive col-sm-4" >
-        <img src="images/water-hands.jpg" alt="Thermostar" class="img-responsive" style="width: 100%">
-      </div>
-     <div class="col-sm-8 align-self-center">
-        <p>The Thermostar Dry Steam Cleaner is not only very compact and highly efficient, but it also has a long life, thanks to the excellent workmanship.</p>
-     <p>With the <a style="color:#123396" href="#lrw" data-toggle="modal" data-target="#Warranty">lifelong restoration guarantee</a>, you will never have to buy another steam cleaner again – this means: not only will you save a lot of money, but you will also protect your environment at the same time!</p>
-     </div>
-</div>
-</div>
-<br>
-<div class="container" alt="More">
-<div class="row">
-     <div class="col-sm-8">
-        <h2>More about the advantages of the Thermostar Dry Steam Cleaning System:</h2>
-        <ul><li>Globally successful <a href="#tt" data-toggle="modal" data-target="#ThermostarTechnology">Thermostar technology</a></li><li>Hygienic and gentle cleaning with <a href="#dsa" data-toggle="modal" data-target="#DrySteamAdvantage">dry steam</a></li><li>European standard quality product</li><li>Lifelong <a href="#lrw" data-toggle="modal" data-target="#Warranty">restoration guarantee</a></li><li>Two <a href="#dsp" data-toggle="modal" data-target="#DrySteamProducts">high performance variants</a>: from household to professionals&nbsp;</li></ul>
-     </div>
-      <div class="col-sm-4 text-center" >
-        <img src="images/thermostar-testlabor.png" alt="Thermostar" width="170" class="img-fluid">
-      </div>
-</div>
-</div>
+</section>
 
 
-<!-- DrySteamProducts -->
-<div class="modal hide fade" id="DrySteamProducts" tabindex="-1" role="dialog" aria-labelledby="DrySteamProductsLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="DrySteamProductsLabel">Dry Steam Products</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <h6>From a home steam cleaner to a professional unit</h6>
-       <p>The Thermostar Dry Steam Cleaner is available in two variations:</p>
-        <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4 text-center"><img src="images/Thermostar-Avantgarde-S4.png" class="img-fluid" width="170"></img></div>
-      <div class="col-md-8 ml-auto">
-       <h2>Thermostar Avantgarde S4</h2>
-       <p>Coming with a dual chamber system and a longer operating time without having to refill with water.</p>
-     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#TechDetAvaS4" aria-expanded="false" aria-controls="collapseExample">
-    Technical Details: Avantgarde S4
-  </button>
-<div class="collapse" id="TechDetAvaS4">
-  <div class="card card-body">
-   <table class="table table-striped">
-  <thead>
-    <tr>
-      <td>Stainless Steel Boiler</td>
-      <td>AISI 304</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Boiler Volume</td><td>1.5L</td></tr><tr><td>Water Tank</td><td>2L</td></tr><tr><td>Pressure</td><td>6 bar</td></tr><tr><td>Steam Production</td><td>64g/min</td></tr><tr><td>Steam Production</td><td>3.8kg/h</td></tr><tr><td>Steam T°</td><td>160°C</td></tr><tr><td>Voltage</td><td>230V – 50/60 Hz</td></tr><tr><td>Maximum Power</td><td>2.85 KW</td></tr><tr><td>Boiler Power</td><td>2.0 KW</td></tr><tr><td>Weight</td><td>ca. 9.5kg</td></tr>
-  </tbody>
-</table>
-  </div>
-</div>
-      </div>
-      
-       <div class="row">
-      <div class="col-md-4 text-center"><img src="images/Thermostar-Professional-S4.png" class="img-fluid" width="170"></img></div>
-      <div class="col-md-8 ml-auto">
-       <h2>Thermostar Professional S4</h2>
-       <p>The professional steam cleaner for the home: With water pressure of up to 8 bar and steam temperature of more than 190°C, the Thermostar Professional ensures highly hygienic cleanliness.</p>
-     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#TechDetProS4" aria-expanded="false" aria-controls="collapseExample">
-    Technical Details: Avantgarde S4
-  </button>
-<div class="collapse" id="TechDetProS4">
-  <div class="card card-body">
-  <table class="table table-striped"><tbody><tr><td>Stainless Steel Boiler</td><td>AISI 304</td></tr><tr><td>Boiler Volume</td><td>1.5L</td></tr><tr><td>Water Tank</td><td>2L</td></tr><tr><td>Pressure</td><td>8 bar</td></tr><tr><td>Steam Production</td><td>64g/min</td></tr><tr><td>Steam Production</td><td>3.8kg/h</td></tr><tr><td>Steam T°</td><td>170°C</td></tr><tr><td>Voltage</td><td>230V – 50/60 Hz</td></tr><tr><td>Maximum Power</td><td>2.45 KW</td></tr><tr><td>Boiler Power</td><td>2.4 KW</td></tr><tr><td>Weight</td><td>ca. 9.5kg</td></tr></tbody></table>
-  </div>
-</div>
-      </div>
+<!-- ══════════════════════════════════════
+     PRODUCTS
+══════════════════════════════════════ -->
+<section id="products" class="ts-section ts-section-light">
+  <div class="container-xl">
+    <div class="text-center mb-5 ts-reveal">
+      <span class="ts-label">Our Range</span>
+      <h2 class="ts-h2">Dry Steam Products</h2>
+      <p class="ts-lead mx-auto">From household to professional — choose the Thermostar that's right for you</p>
     </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-</div>
-</div>
-<!-- end -->
-<!-- DrySteamAdvantage -->
-<div id="DrySteamAdvantage" class="modal hide fade" tabindex="-2" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="DrySteamProductsLabel">Dry Steam Advantages</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <div class="text-center"><img src="images/dsa.jpg" class="img-fluid"></img></div>
-        <div class="container-fluid">
-          <br>
-    <div class="row">
-
-     <h5>Dry steam: Hygienic cleanliness and maximum protection for your textiles</h5>
-  <p>Thermostar Dry steam system: thanks to its Thermostar technology, the steam is heated up in the boiler before the cleaning to up to 174 °C. One of the biggest advantages compared with a customary steam cleaner: the steam produced through the high temperature is very dry and is also suited very well for the cleaning of textiles, like beds, carpets and upholstered furniture. The textiles do not become wet, cannot burn and no moisture stains stay behind. Also, the impregnation is preserved in spite of the application of the steam cleaner. One also receives a deep cleaning that greatly reduces the number of mites, which is very practical, above all for allergy sufferers and their health.</p>
-    <p>The Thermostar heating elements with 28W/cm2, in contrast to the standard heating elements (approx. 7W/cm2), exhibit a much better productivity. The heating element itself is not in direct contact with the water. It is sheathed with a special alloy and therefore has maximum heat performance. Another feature of the Thermostar heating element is that it expands with rising temperature. This has the result that the limescale coating formed on the heating element drops off. We can call our heating element “self decalcifying”. Moreover, a longer service life can thereby be achieved. The Thermostar steam boiler guarantees simple replacement of the heating element. Thus not the entire steam boiler must be replaced in case of a possible defect.</p>
-    <p>Through the use of the high temperature, the Thermostar dry steam cleaner manages to kill germs and bacteria, to remove greases easily and simply and to clean rough as well as smooth surfaces hygienically. The selection of which cleaning product is suitable or not is therefore obsolete. The cleaning is done only through water vapour thanks to the steam cleaner. You need no chemicals, no cleaning products, and you clean in a cheap, healthy and environmentally-friendly way!</p>
-   <h5>Here again are the advantages briefly at a glance:</h5>
-   <ul>
-<li>germs and bacteria are killed</li>
-<li>even greases are dissolved</li>
-<li>textiles, rough and smooth surfaces, hygienically clean!</li>
-<li>high level of cleanliness</li>
-<li>no chemicals and/or cleaning products – cheap and environmentally-friendly</li>
-<li>textiles are only slightly moistened</li>
-<li>no burning, no moisture stains</li>
-<li>impregnation is preserved</li>
-<li>self-decalcifying system</li>
-<li>long service life</li></ul>
-   <h5>Thermostar Dry steam cleaner system is available in 2 different versions:</h5>
-   <ul>
-<li>Thermostar Avantgarde</li>
-<li>Thermostar Professional</li></ul>
-   <p>Therefore you can select the version suitable for you according to your requirements. Thus, there is the optimal solution for everyone. The Thermostar Dry steam cleaner has a professional technology and yet thanks to its compact size it is still ideally suitable for domestic use.</p>
-    </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-    <div>
-    </div>
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- Waranty -->
-<div id="Warranty" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="Warranty">Lifelong Restoration Warranty*</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-    <div class="row">
-<p>The steam boiler made from stainless steel, with an integrated fan for cooling the electronics and a self-decalcifying heating rod as well as an electromagnetical float. There really is no wonder why the Thermostar Dry Steam System has a very long life with such a perfect and sleek design. The intelligent technology is so outstanding that one now finds it in many other products worldwide. The self-descaling heating rod has a four times higher performance than other spiral heating elements and can also be replaced at any time. And if, nevertheless, a repair is necessary, we guarantee that you will receive all the spare parts for a repair from us. You will never have to dispose of a device again.</p>
-     <h5>Your guarantee: A lifelong spare parts procurement for all device types!*</h5>
-     <p>The investment in a Thermostar Dry Steam Cleaner is an investment for life. You will not need another steam cleaner anymore! This is how you can go easy on your wallet, since you save the acquisition costs for a new steam cleaner and also help the environment – with no disposal costs for additional devices.</p>
-        </div>
-    <div class="row">
-      <div class="col-sm-4 text-center" >
-        <img src="images/warranty.png" alt="Thermostar" class="img-fluid">
-      </div>
-     <div class="col-sm-8">
-        <p>Due to the special technology within it, the Thermostar not only has an especially long service life, but it means that you can clean without the need for chemicals and/or cleaning products making it particularly environmentally friendly. It's simple: you can clean exclusively with hot water steam, thereby making a valuable contribution to preserving our environment.</p>
-        <p>What to expect:</p>
-        <ul><li>The best European standard product quality with a long service life</li><li>Environmentally friendly: cleaning without cleaning products and/or chemicals</li></ul>
-     </div>
-</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-    <div>
-    </div>
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- ProductsForLife -->
-<div id="ProductsForLife" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="ProductsForLife">Products for life</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-    <div class="row">
-<h5>Never again another steam cleaner</h5>
-     <p>Buy smart – Thermostar dry steam systems: never again will you need another steam cleaner and you can therefore save a lot of money and spare the environment! The system is available in 3 different versions. Therefore you can select the version suitable for you according to your requirements. Thus the optimum solution is available for everybody.</p>
-   <p>Because – no matter whether Classic, Avantgarde or Professional - Thermostar Dry steam cleaners are products for life:</p>
-    </div>
-    <div class="row">
-      <div class="col-sm-4 text-center" >
-        <img src="images/pfl.jpg" alt="Products for lifetime" class="img-fluid">
-      </div>
-     <div class="col-sm-8">
-        <ul><li>Stainless steel boiler (10-year Warranty!*)</li><li>Integrated fan for cooling the electronics</li><li>Self-decalcifying heating rod (expansion with temperature increase leads to the lime deposits dropping off)</li><li>Self-decalcifying electric-mechanical float (with True Temp technology for continuously high steam temperature)</li></ul>
-      <p>The Thermostar is a dry steam cleaner, which has the technology of professional commercial appliances and – on account of the compact size – can also be used in the home. The cleaning is done exclusively with hot water steam so you can save on expensive cleaning agents.</p>
-       </div>
-    </div>
-      <div class="row">
-     <p>With your steam cleaner, carefree and at low cost, you can bring all areas in the household to a mirror finish and deep clean them for years, and even more, quickly and easily. You have already owned the cleaner for some years and suddenly a repair is necessary? No problem thanks to the Restoration Warranty. No matter after how many years, this protects you against the costs of a new purchase and this is also lifelong!</p>
-<h5>For the sake of the environment</h5>
-<p>However, with the purchase of a Thermostar Dry steam system, you also make a valuable contribution to the protection of the environment. Because Thermostar means: Buy only once, dispose of only once. And hygienic cleanliness without cleaning products and/or chemicals! The use of the Thermostar represents a healthy and environmentally-friendly alternative to traditional steam cleaners.</p>
-</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-    <div>
-    </div>
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- ThermostarTechnology -->
-<div id="ThermostarTechnology" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="ThermostarTechnology">Thermostar Technology</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-    <div class="row">
-     <div class="col">
-      <h5>Worldwide Success</h5>
-      <p>More than 100,000 units of the Thermostar Dry Steam Cleaner have been sold all over the world thanks to its multiple benefits and excellent cleaning. The technology within the product, which makes Thermostar the best dry steam cleaner in the world, is now being used in many other products. </p>
-     </div>
-  <div class="col">
-   <h5>Intelligent technology</h5>
-   <p>An independent method was invented for the Thermostar Dry Steam Cleaner, which is responsible for the very dry steam and a long lifespan of usage. The technology of this invention is now being used all over the world.</p>
-  </div>
-  <div class="row">
-   <div class="col-sm-4">
-    <img src="images/technology.png" alt="Technology" class="img-fluid">
-   </div>
-   <div class="col-sm-8">
-    <h6>The steam boiler is made of stainless steel and has heating elements that can be taken apart.</h6>
-    <p>The boiler is produced exclusively from AISI 304 stainless steel, a durable, resistant steel that can withstand temperatures up to 600°C. The production is done by specialised technicians with a special welding process called Tungsten Inert Gas, and it is welded together and tested with up to 70 bar pressure. The welding process is distinguished from other fusion welding processes through a number of advantages, because practically no weld spatters arise, therefore the health burden from welding fumes is low when using this method.</p>
-   </div>
-  </div>
-   <div class="row">
-   <div class="col-sm-8">
-    <h6>The Dry Steam Cleaner has a self-decalcifying heating element.</h6>
-    <p>These elements have four times as much power as spiral heating elements (28 instead of 7W/cm2 on average). They have a very long service life and can be replaced, in contrast to most spiral heaters.
-Sheathed with a special alloy, it provides maximum power and the fastest possible heating of the water for a continuously high steam temperature. When the temperature rises, it expands and thus dissolves the limescale. The self-decalcifying electromechanical float provides a consistently high temperature throughout.</p>
-   </div>
-   <div class="col-sm-4">
-    <img src="images/technology2.jpg" alt="Technology" class="img-fluid">
-   </div>
-  </div>
-   <div class="row">
-   <div class="col-sm-4">
-    <img src="images/steam.jpg" alt="Steam" class="img-fluid">
-   </div>
-   <div class="col-sm-8">
-    <h6>The steam never runs out</h6>
-    <p>Thermostar offers you a continuous steam 24/7. As a result of this professional standard technology, it hardly needs any maintenance. An operating hours meter is integrated as well as a self-controlled temperature indicator. In addition, special rubber sleeves on the water pump extend the life duration of the valves.</p>
-  </div>
-  </div>
-   <div class="row">
-     <div class="col text-center">
-    <h6>True Temp Technology and two chamber system.</h6> </div>
-    <p>The electromagnetical float in the Thermostar ensures a high quality steam during the whole service life. The electronic sensors used by customary steam devices already become calcified after a short time and therefore the exchange of information is disturbed – the result is moist steam. Through the two chamber system, the steam cleaner is also refillable at any time, even at full operating temperature. This means that no cooling down period is necessary anymore for water replenishment and therefore unnecessary waiting periods are a thing of the past!</p>
-  
-   </div>
- </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-    <div>
-    </div>
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- User Manual -->
-<div id="UserManual" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="UserManual">User Manual</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-    <div class="row">
-     <h5>Thermostar User Manual</h5>
-<object data="documents/thermostar_users_guide.pdf" type="application/pdf" width="100%" height="600px"> 
-  <p>It appears you don't have a PDF plugin for this browser. You can <a href="documents/thermostar_users_guide.pdf" target="_blank">click here to download the PDF file.</a></p>
-</object>
-<h5>Thermostar Steam Iron Manual</h5>
-  <p>Please <a href="documents/thermostar_steam_iron_user_manual.pdf" target="_blank">click here to download the PDF file</a> of Thermostar Steam Iron Manual</p>
-  <h5>Thermostar Steam Ironing Station Manual</h5>
-  <p>Please <a href="documents/thermostar_steam_iron_station_user_manual.pdf" target="_blank">click here to download the PDF file</a> of Thermostar Steam Ironing Station Manual</p>
-</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-    
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- History -->
-<div id="History" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="History">History</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-    <div class="row">
-<h5>Thermostar - a sustained invention</h5>
-<p>More than 30 years ago a pioneering invention was made in Italy, the land of steam! The foundation of modern Thermostar was a revolutionary boiler and an interchangeable heating element. Since then the requirements on technology and standard of living increased continuously - and so did the Thermostar!</p>
-<div class="row">
-   <div class="col-sm-4">
-    <img src="images/thermostar-old.png" alt="Thermostar Old" class="img-fluid">
-   </div>
-   <div class="col-sm-8">
-    <h6>Technical development</h6>
-    <ul><li>1989 our first Thermo-Cleaner was born</li><li>2009 we became a new name: THERMOSTAR</li><li>Since 2011 our portfolio is increasing</li></ul>
-    <p>So whatever happens in future...</p>
-   </div>
-  </div>
-<div class="row">
- <div class="col-sm-8 align-self-center">
-
-    <h6>...Thermostar is part of it:</h6>
-    <p>As it is the smallest, fastest and strongest drysteam-cleaner in its class, it is the most versatile Thermo-cleaner in the world!</p>
-   </div>
-   <div class="col-sm-4">
-    <img src="images/thermostar-transparent.png" alt="Thermostar" class="img-fluid">
-   </div>
-  </div>
-</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-    
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- Philosophy -->
-<div id="Philosophy" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="Philosophy">Philosophy</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-    <div class="row">
- <div class="col-sm-4">
-    <img src="images/philosophy.jpg" alt="Philosophy" class="img-fluid">
-   </div>
-   <div class="col-sm-8 align-self-center">
-    <p>Do you feel the same way sometimes? Sometimes, just looking at people, one might get the impression that nature belongs to us. In reality, we are also just a part of it. The future belongs to our children. Therefore, we at Thermostar try to prevent mountains of waste wherever possible. And, we have found a way that makes sense, both ecologically and economically.</p>
-    <p>This is because products for life only have to bought once and only disposed of once!</p>
-   </div>
-      </div>
-    <p>Thermostar products are not available through conventional retail channels. They have a very high quality standard with extraordinary guarantee services.</p>
-    </div>
-  </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- ProductVideo -->
-<div id="ProductVideo" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="ProductVideo">Product Video</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-         <div class="row justify-content-center">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/I-EW48uhCjs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         </div>
-</div>
-  </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- TechnologyVideo -->
-<div id="TechnologyVideo" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="TechnologyVideo">Technology Video</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-         <div class="row justify-content-center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ulVEkMOlfdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         </div>
-</div>
-  </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-            </div>
-</div>
-<!-- end -->
-
-<!-- ApplicationVideo -->
-<div id="ApplicationVideo" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="ApplicationVideo">Application Video</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-         <div class="row justify-content-center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/k1pI_k0mr-E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-  </div>
-    </div>
-       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-            </div>
-</div>
-</div>
-<!-- end -->
-
-<!-- SteamIronVideo -->
-<div id="SteamIronVideo" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="SteamIronVideo">Steam Iron Station Video</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-         <div class="row justify-content-center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P5JVIpSZ9t4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-  </div>
-    </div>
-       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-            </div>
-</div>
-</div>
-<!-- end -->
-
-<!-- TrainingVideo -->
-<div id="TrainingVideo" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="TrainingVideo">Training Video</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-         <div class="row justify-content-center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u1yxe7DBXWY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-  </div>
-    </div>
-       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-            </div>
-</div>
-</div>
-<!-- end -->
-
-<!-- ContactUs -->
-<div id="ContactUs" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="ContactUs">Contact Us</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-         <div class="row">
-<h4>Live presentation of all of the advantages – for you exclusively!</h4>
-<p>
-You know it yourself: cleaning equipment cannot be tested realistically in a shop. We offer you an extensive demonstration as a service for you at your home. Because you are the best judge of how much easier and more thorough cleaning is with the Thermostar. And you are going to be astonished!
-</p><p>
-We will honour your time and interest with a valuable thank-you gift.
-</p><p>
-The Thermostar dry steam system cannot be found in conventional retail shops, but is available exclusively from selected authorised distributors.</p>
-<h4>Our demonstration: fast – simple – free of charge</h4>
-<p>Give us a call or send us an e-mail. Don’t forget your postcode as this will help us when making an appointment to arrange when we can be with you.</p>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegV0Z1nMoySHEqjwpFPkFLr2vQDdDylbCjgLQ7A-nmO3qd8g/viewform?embedded=true" width="100%" height="1550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</div>
-  </div>
-    </div>
-       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-            </div>
-</div>
-</div>
-<!-- end -->
-<!-- EnT -->
-<div id="EnT" class="modal hide fade" tabindex="-3" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="EnT">Equipment and Tools</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-         <div class="row">
-<div class="col-sm-4 tab">
-<img src="images/thermostar-transparent.png" class="img-fluid" alt="Thermostar">
-</div>
-<div class="col align-self-center">
- <h4>Standard equipment</h4><ul><li>Thermostar Dry Steam Cleaner: Avantgarde or Professional</li><li>A flexible steam hose with extension tube</li><li>Two extensions</li><li>Two standard brushes with steam puffers</li><li>A set with standard brushes</li><li>Two steam lances</li><li>A drain dome head</li><li>A steam scraper</li></ul>
-</div>
-</div>
-         <div class="row">
-          <div class="col align-self-center">
-           <h4>Additional Thermostar tools</h4><ul><li>Thermostar Steam Mop System</li><li>Steam iron</li><li>Steam ironing station</li><li>Cleaning cart</li></ul>
+    <div class="row g-4">
+      <!-- Avantgarde S4 -->
+      <div class="col-md-6 ts-reveal ts-reveal-delay-1">
+        <div class="ts-card position-relative">
+          <div class="ts-card-img-wrap">
+            <img src="images/Thermostar-Avantgarde-S4.png" alt="Thermostar Avantgarde S4">
           </div>
-          <div class="col-sm-4">
-           <img src="images/mop.png" class="img-fluid" alt="Mop System">
-          </div>
-         </div>
-  </div>
-    
-    </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
+          <div class="ts-card-body">
+            <h3 class="ts-product-name">Thermostar Avantgarde S4</h3>
+            <p class="ts-product-desc">Dual chamber system with extended operating time — no cooling down needed to refill. The ideal home steam cleaner for thorough, chemical-free cleaning.</p>
+            <div class="ts-spec-pills">
+              <span class="ts-spec-pill"><i class="bi bi-thermometer-half"></i> 160°C</span>
+              <span class="ts-spec-pill"><i class="bi bi-speedometer2"></i> 6 bar</span>
+              <span class="ts-spec-pill"><i class="bi bi-lightning-fill"></i> 2.85 KW</span>
             </div>
-</div>
-</div>
-<!-- end -->
-<!-- Applications -->
-<div id="Applications" class="modal hide fade" tabindex="-2" role="dialog" aria-labelledby="post-comment" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#fff">
-        <h5 class="modal-title" id="Applications">Applications</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+            <div class="accordion mt-3" id="accAva">
+              <div class="ts-acc-item accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed ts-acc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#specsAva">
+                    Technical Specifications
+                  </button>
+                </h2>
+                <div id="specsAva" class="accordion-collapse collapse" data-bs-parent="#accAva">
+                  <div class="accordion-body p-0">
+                    <table class="table ts-specs-tbl mb-0">
+                      <tbody>
+                        <tr><td>Stainless Steel Boiler</td><td><strong>AISI 304</strong></td></tr>
+                        <tr><td>Boiler Volume</td><td><strong>1.5 L</strong></td></tr>
+                        <tr><td>Water Tank</td><td><strong>2 L</strong></td></tr>
+                        <tr><td>Pressure</td><td><strong>6 bar</strong></td></tr>
+                        <tr><td>Steam Production</td><td><strong>64 g/min (3.8 kg/h)</strong></td></tr>
+                        <tr><td>Steam Temperature</td><td><strong>160°C</strong></td></tr>
+                        <tr><td>Voltage</td><td><strong>230V – 50/60 Hz</strong></td></tr>
+                        <tr><td>Maximum Power</td><td><strong>2.85 KW</strong></td></tr>
+                        <tr><td>Boiler Power</td><td><strong>2.0 KW</strong></td></tr>
+                        <tr><td>Weight</td><td><strong>ca. 9.5 kg</strong></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="ts-btn ts-btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-product="Thermostar Avantgarde S4">
+              Enquire About This Product
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Professional S4 -->
+      <div class="col-md-6 ts-reveal ts-reveal-delay-2">
+        <div class="ts-card ts-card-featured position-relative">
+          <span class="ts-card-badge">Professional Choice</span>
+          <div class="ts-card-img-wrap">
+            <img src="images/Thermostar-Professional-S4.png" alt="Thermostar Professional S4">
+          </div>
+          <div class="ts-card-body">
+            <h3 class="ts-product-name">Thermostar Professional S4</h3>
+            <p class="ts-product-desc">The professional steam cleaner for the home. Up to 8 bar and 190°C+ steam temperature — for highly hygienic, thorough cleanliness on any surface.</p>
+            <div class="ts-spec-pills">
+              <span class="ts-spec-pill"><i class="bi bi-thermometer-half"></i> 190°C+</span>
+              <span class="ts-spec-pill"><i class="bi bi-speedometer2"></i> 8 bar</span>
+              <span class="ts-spec-pill"><i class="bi bi-lightning-fill"></i> 2.45 KW</span>
+            </div>
+            <div class="accordion mt-3" id="accPro">
+              <div class="ts-acc-item accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed ts-acc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#specsPro">
+                    Technical Specifications
+                  </button>
+                </h2>
+                <div id="specsPro" class="accordion-collapse collapse" data-bs-parent="#accPro">
+                  <div class="accordion-body p-0">
+                    <table class="table ts-specs-tbl mb-0">
+                      <tbody>
+                        <tr><td>Stainless Steel Boiler</td><td><strong>AISI 304</strong></td></tr>
+                        <tr><td>Boiler Volume</td><td><strong>1.5 L</strong></td></tr>
+                        <tr><td>Water Tank</td><td><strong>2 L</strong></td></tr>
+                        <tr><td>Pressure</td><td><strong>8 bar</strong></td></tr>
+                        <tr><td>Steam Production</td><td><strong>64 g/min (3.8 kg/h)</strong></td></tr>
+                        <tr><td>Steam Temperature</td><td><strong>170°C</strong></td></tr>
+                        <tr><td>Voltage</td><td><strong>230V – 50/60 Hz</strong></td></tr>
+                        <tr><td>Maximum Power</td><td><strong>2.45 KW</strong></td></tr>
+                        <tr><td>Boiler Power</td><td><strong>2.4 KW</strong></td></tr>
+                        <tr><td>Weight</td><td><strong>ca. 9.5 kg</strong></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="ts-btn ts-btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-product="Thermostar Professional S4">
+              Enquire About This Product
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     DRY STEAM ADVANTAGES
+══════════════════════════════════════ -->
+<section id="advantages" class="ts-section ts-section-dark">
+  <div class="container-xl">
+    <div class="text-center mb-5 ts-reveal">
+      <span class="ts-label ts-label-light">Why Dry Steam?</span>
+      <h2 class="ts-h2 ts-h2-light">The Advantages of<br>Dry Steam Cleaning</h2>
+    </div>
+    <div class="row g-3 mb-5 ts-reveal">
+      <div class="col-6 col-md-4 col-lg-2"><div class="ts-adv-card"><i class="bi bi-shield-check ts-adv-icon"></i>No Chemicals</div></div>
+      <div class="col-6 col-md-4 col-lg-2"><div class="ts-adv-card"><i class="bi bi-bug ts-adv-icon"></i>Kills Bacteria &amp; Germs</div></div>
+      <div class="col-6 col-md-4 col-lg-2"><div class="ts-adv-card"><i class="bi bi-droplet-half ts-adv-icon"></i>Textiles Stay Dry</div></div>
+      <div class="col-6 col-md-4 col-lg-2"><div class="ts-adv-card"><i class="bi bi-infinity ts-adv-icon"></i>Self-Decalcifying</div></div>
+      <div class="col-6 col-md-4 col-lg-2"><div class="ts-adv-card"><i class="bi bi-recycle ts-adv-icon"></i>Eco-Friendly</div></div>
+      <div class="col-6 col-md-4 col-lg-2"><div class="ts-adv-card"><i class="bi bi-clock-history ts-adv-icon"></i>Long Service Life</div></div>
+    </div>
+    <div class="row align-items-center g-5 ts-reveal">
+      <div class="col-lg-5">
+        <img src="images/dsa.jpg" alt="Dry Steam Advantages" class="img-fluid rounded-4 w-100" style="object-fit:cover;max-height:360px;">
+      </div>
+      <div class="col-lg-7">
+        <span class="ts-label ts-label-light">The Science</span>
+        <h3 class="ts-h2 ts-h2-light">Hygienic Cleanliness at 174°C</h3>
+        <p class="ts-body ts-body-light">Thanks to Thermostar technology, steam is heated in the boiler to up to 174°C before cleaning begins. This produces exceptionally dry steam — perfectly suited for textiles, carpets and upholstery without leaving moisture stains or destroying impregnation.</p>
+        <p class="ts-body ts-body-light">The Thermostar heating elements deliver 28W/cm² — four times more than standard spiral heating elements. The self-decalcifying design means lime deposits fall off as the element expands with heat, ensuring consistent performance for years.</p>
+        <ul class="ts-checklist mt-3">
+          <li style="color:rgba(255,255,255,.65)">Germs and bacteria are killed</li>
+          <li style="color:rgba(255,255,255,.65)">Greases dissolved without chemicals</li>
+          <li style="color:rgba(255,255,255,.65)">Impregnation preserved on treated textiles</li>
+          <li style="color:rgba(255,255,255,.65)">Ideal for allergy sufferers — reduces mites</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     APPLICATIONS
+══════════════════════════════════════ -->
+<section id="applications" class="ts-section">
+  <div class="container-xl">
+    <div class="text-center mb-5 ts-reveal">
+      <span class="ts-label">Versatility</span>
+      <h2 class="ts-h2">Where Can You Use It?</h2>
+      <p class="ts-lead mx-auto">28 different applications — from kitchen to car, tap a surface to see how</p>
+    </div>
+    <div class="row g-2 ts-reveal" id="appGrid">
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-house-door"></i></div>
+          <div class="ts-app-name">Entire Household</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Just clean everything with steam! Sparkling tiles, clean carpets, spotless glass. Clean all rooms twice as fast and easily.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-droplet-fill"></i></div>
+          <div class="ts-app-name">Bathrooms &amp; Toilets</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Large areas with triangular/square brush + microfibre cloth. Corners and slits with steam nozzle. Inner toilet edges with hot water function.<br><em>Accessory: Steam Lance, Triangular &amp; Rectangular Brush</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-bricks"></i></div>
+          <div class="ts-app-name">Wall Tiles &amp; Shower</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>For heavy calcium deposits, apply vinegar/citric acid first (20 min), then clean with steam nozzle and microfibre cloth. Clean grooves with nylon or brass brush.<br><em>Accessory: Steam Lance, Triangular Brush, Joint Brushes</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-fire"></i></div>
+          <div class="ts-app-name">Kitchen Grease</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Clean with steam lance, small round brass brush or large nylon brush with stainless steel wool depending on surface sensitivity.<br><em>Level: Maximum steam · Accessory: Steam Lance, Brass &amp; Nylon Brush, SS Wool</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-thermometer-sun"></i></div>
+          <div class="ts-app-name">Kitchen Oven</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Hot steam dissolves even burnt-in stains. Use round nylon brush with stainless steel wool. Move with pressure on stubborn areas.<br><em>Level: Minimum steam · Accessory: SS Wool &amp; Nylon Brush</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-fan"></i></div>
+          <div class="ts-app-name">Vent Hood</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Blow through grease filter with maximum steam. For extractor hood, use steam lance and wipe with microfibre cloth.<br><em>Accessory: Steam Lance &amp; Small Nylon Brush</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-moon-stars-fill"></i></div>
+          <div class="ts-app-name">Mattresses &amp; Upholstery</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Clean with triangular or square brush + clamped microfibre cloth. Test on concealed spot first. For sensitive fabrics, steam from 10cm away.<br><em>Level: Maximum steam</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-layers"></i></div>
+          <div class="ts-app-name">Carpet Cleaning</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Clean with triangular or square brushes and clamped microfibre cloth. Test a hidden area first. For sensitive fabrics, apply steam from 10cm.<br><em>Level: Maximum steam · Accessory: Rectangular Brush &amp; Extensions</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-patch-minus"></i></div>
+          <div class="ts-app-name">Carpet &amp; Fabric Stains</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Place steam lance directly over stain and move quickly back and forth. Wipe with microfibre cloth. Check material is steam-safe first.<br><em>Level: Minimum steam · Accessory: Steam Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-layout-text-window"></i></div>
+          <div class="ts-app-name">Parquet &amp; Laminate</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Use square brush with clamped microfibre cloth. Press steam switch only occasionally — minimal humidity. Gentler than wet mopping.<br><em>Level: Minimum steam · Accessory: Rectangular Brush &amp; Extensions</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-grid-3x3"></i></div>
+          <div class="ts-app-name">PVC &amp; Floor Tiles</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Clean with triangular or square brush + clamped microfibre cloth. Kills bacteria and dissolves lime without chemicals.<br><em>Level: Minimum steam · Accessory: Triangular or Rectangular Brush</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-car-front"></i></div>
+          <div class="ts-app-name">Car Exterior</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Very hot, dry steam removes insects, brake dust and stubborn dirt gently. Use from close range for deep clean; wipe with microfibre cloth.<br><em>Level: Min–Max steam · Accessory: Steam or Bayonet Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-car-front-fill"></i></div>
+          <div class="ts-app-name">Car Interior</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Clean upholstery, carpets, door linings, dashboard, safety belts. Use triangular brush + cloth. Max steam for fabric seats; minimum for leather/Alcantara.<br><em>Accessory: Steam Lance &amp; Triangular Brush</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-bicycle"></i></div>
+          <div class="ts-app-name">Bicycles &amp; Motorcycles</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Clean with steam lance and wipe with microfibre cloth when complete.<br><em>Level: Hot water, min–max steam · Accessory: Steam Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-window"></i></div>
+          <div class="ts-app-name">Glass &amp; Windows</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Dissolve dirt with steam nozzle, wipe with microfibre cloths. Or use triangular brush + cloth, or the special window cleaner attachment.<br><em>Level: Minimum steam · Accessory: Steam Lance, Steam Window Cleaner</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-columns-gap"></i></div>
+          <div class="ts-app-name">Window Frames &amp; Shutters</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Use steam lance (wipe with cloth) or triangular brush + clamped cloth. With wooden frames, use little moisture and keep lance tip back.<br><em>Level: Minimum steam</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-view-list"></i></div>
+          <div class="ts-app-name">Venetian Blinds</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Steam individually with little pressure then wipe with microfibre cloth — blinds are sensitive.<br><em>Level: Minimum steam · Accessory: Steam Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-grid-3x3-gap"></i></div>
+          <div class="ts-app-name">Joints &amp; Grooves</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Use round brass or nylon brushes with extension tubes. Move slowly with little pressure — more heat, less effort. Use special joint brushes too.<br><em>Level: Minimum steam · Accessory: Nylon, Brass &amp; Joint Brushes</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-droplet"></i></div>
+          <div class="ts-app-name">Bathroom Fixtures &amp; Calcium</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Use steam lance + round nylon brush with stainless steel wool. For large calcium deposits, add a small amount of vinegar or citric acid.<br><em>Level: Min–Max steam</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-water"></i></div>
+          <div class="ts-app-name">Drain Cleaning</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Fill drain with a little water, place drain dome head over drain, close overflow openings and flush with hot water in short intervals.<br><em>Level: Hot water · Accessory: Drain Dome Head</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-thermometer-half"></i></div>
+          <div class="ts-app-name">Radiators</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Clean radiators from above with steam lance. Dust is collected and can be wiped off at the bottom.<br><em>Level: Maximum steam · Accessory: Steam Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-flower1"></i></div>
+          <div class="ts-app-name">Garden Furniture</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Use triangular brush with cloth. For plastic furniture, place microfibre cloth between brush and surface to avoid damage.<br><em>Level: Minimum steam · Accessory: Triangular Brushes</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-bag-heart"></i></div>
+          <div class="ts-app-name">Leather</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Clean with triangular/square brush + clamped microfibre cloth. Operate steam switch only occasionally. Apply leather protective agent after.<br><em>Level: Minimum steam</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-tree"></i></div>
+          <div class="ts-app-name">Plants</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Steam from 40–50cm away. At this distance steam is no longer hot but cool — easily removes dust without damage.<br><em>Level: Maximum steam · Accessory: Steam or Bayonet Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-table"></i></div>
+          <div class="ts-app-name">Wood Furniture</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Steam from slightly greater distance and wipe immediately with microfibre cloth. Takes a little longer but is very gentle.<br><em>Level: Minimum steam, even clean · Accessory: Steam Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-star"></i></div>
+          <div class="ts-app-name">Polished Wood Surfaces</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Treat waxed wood very carefully, without pressure. Use towels (not microfibre) as microfibre can remove the wax layer.<br><em>Level: Minimum steam · Accessory: Steam Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-snow"></i></div>
+          <div class="ts-app-name">Thawing &amp; Defrosting</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Attach steam lance with steam scraper. Smoothly clean frosted fridge areas — gently thaws ice in a controlled manner.<br><em>Level: Maximum steam · Accessory: Steam Scraper</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-gem"></i></div>
+          <div class="ts-app-name">Watch Bands &amp; Jewellery</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Place jewellery on microfibre cloth and clean at close range with steam nozzle. Steam onto the strap only — not directly onto the watch case!<br><em>Level: Minimum steam · Accessory: Steam Lance</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="ts-app-card" onclick="toggleApp(this)">
+          <div class="ts-app-icon-w"><i class="bi bi-box"></i></div>
+          <div class="ts-app-name">Animal Cages &amp; Metal Grates</div>
+          <div class="ts-app-detail-box">
+            <div class="ts-acc-label">Instructions</div>Simply clean with steam lance and wipe with microfibre cloth.<br><em>Level: Min–Max steam · Accessory: Steam Lance</em>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     TECHNOLOGY
+══════════════════════════════════════ -->
+<section id="technology" class="ts-section ts-section-light">
+  <div class="container-xl">
+    <div class="text-center mb-5 ts-reveal">
+      <span class="ts-label">Under the Hood</span>
+      <h2 class="ts-h2">Thermostar Technology</h2>
+      <p class="ts-lead mx-auto">More than 100,000 units sold worldwide. The technology in Thermostar is now used in many other products globally.</p>
+    </div>
+    <div class="row g-4 mb-5">
+      <div class="col-md-6 col-lg-3 ts-reveal ts-reveal-delay-1">
+        <div class="ts-card p-4 border-0" style="height:100%">
+          <div class="ts-tech-icon-box"><i class="bi bi-thermometer-high"></i></div>
+          <h5 style="font-weight:700;font-size:.975rem;margin-bottom:.5rem">True Temp Technology</h5>
+          <p class="ts-body" style="font-size:.875rem">The electromagnetic float in Thermostar ensures high-quality, dry steam throughout the entire service life. Unlike electronic sensors that calcify over time, True Temp stays accurate.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 ts-reveal ts-reveal-delay-2">
+        <div class="ts-card p-4 border-0" style="height:100%">
+          <div class="ts-tech-icon-box"><i class="bi bi-arrow-repeat"></i></div>
+          <h5 style="font-weight:700;font-size:.975rem;margin-bottom:.5rem">Self-Decalcifying Element</h5>
+          <p class="ts-body" style="font-size:.875rem">28W/cm² — four times more power than standard elements. The heating element expands with temperature, causing limescale deposits to fall off automatically.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 ts-reveal ts-reveal-delay-3">
+        <div class="ts-card p-4 border-0" style="height:100%">
+          <div class="ts-tech-icon-box"><i class="bi bi-droplet-fill"></i></div>
+          <h5 style="font-weight:700;font-size:.975rem;margin-bottom:.5rem">Two-Chamber System</h5>
+          <p class="ts-body" style="font-size:.875rem">The steam cleaner can be refilled at any time, even at full operating temperature — no cooling down period needed. Never wait to top up.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 ts-reveal ts-reveal-delay-4">
+        <div class="ts-card p-4 border-0" style="height:100%">
+          <div class="ts-tech-icon-box"><i class="bi bi-patch-check-fill"></i></div>
+          <h5 style="font-weight:700;font-size:.975rem;margin-bottom:.5rem">AISI 304 Stainless Boiler</h5>
+          <p class="ts-body" style="font-size:.875rem">Produced exclusively from AISI 304 stainless steel — withstands up to 600°C. Welded via Tungsten Inert Gas process and pressure-tested to 70 bar.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center g-5 ts-reveal">
+      <div class="col-lg-6">
+        <span class="ts-label">Equipment &amp; Tools</span>
+        <h3 class="ts-h2">What's in the Box</h3>
+        <h6 style="font-weight:700;margin-bottom:.75rem;margin-top:1.5rem">Standard Equipment</h6>
+        <ul class="ts-checklist">
+          <li>Thermostar Dry Steam Cleaner (Avantgarde or Professional)</li>
+          <li>Flexible steam hose with extension tube</li>
+          <li>Two extensions</li>
+          <li>Two standard brushes with steam buffers</li>
+          <li>Set of standard brushes</li>
+          <li>Two steam lances</li>
+          <li>Drain dome head</li>
+          <li>Steam scraper</li>
+        </ul>
+        <h6 style="font-weight:700;margin:.75rem 0">Additional Thermostar Tools</h6>
+        <ul class="ts-checklist">
+          <li>Thermostar Steam Mop System</li>
+          <li>Steam Iron</li>
+          <li>Steam Ironing Station</li>
+          <li>Cleaning Cart</li>
+        </ul>
+        <a href="accessories/" class="ts-btn ts-btn-primary mt-4 d-inline-flex">
+          <i class="bi bi-grid-3x3-gap-fill me-2"></i>View All Accessories
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-6">
+            <img src="images/technology.png" alt="Thermostar Technology" class="img-fluid rounded-4 w-100" style="object-fit:contain;background:#f0f8ff;padding:1.5rem;min-height:180px;">
+          </div>
+          <div class="col-6">
+            <img src="images/mop.png" alt="Thermostar Mop System" class="img-fluid rounded-4 w-100" style="object-fit:contain;background:#f0f8ff;padding:1.5rem;min-height:180px;">
+          </div>
+          <div class="col-12">
+            <img src="images/steam.jpg" alt="Steam" class="img-fluid rounded-4 w-100" style="object-fit:cover;max-height:180px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     WARRANTY
+══════════════════════════════════════ -->
+<section id="warranty" class="ts-section">
+  <div class="container-xl">
+    <div class="row align-items-center g-5 ts-reveal">
+      <div class="col-lg-7">
+        <div class="ts-warranty-box">
+          <span class="ts-label">Our Promise</span>
+          <h2 class="ts-h2">Lifelong Restoration Warranty</h2>
+          <p class="ts-body">The investment in a Thermostar is an investment for life. The self-descaling heating rod has four times higher performance than other spiral heating elements and can be replaced at any time.</p>
+          <p class="ts-body">If a repair is ever necessary, we guarantee you will receive all the spare parts — no matter how many years have passed. You will never have to dispose of a device again.</p>
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="ts-tech-icon-box" style="width:44px;height:44px;border-radius:10px;font-size:1.1rem;flex-shrink:0"><i class="bi bi-tools"></i></div>
+                <div><strong style="font-size:.875rem">Lifelong Spare Parts</strong><br><span class="ts-body" style="font-size:.8rem">For all device types, always available</span></div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="ts-tech-icon-box" style="width:44px;height:44px;border-radius:10px;font-size:1.1rem;flex-shrink:0"><i class="bi bi-award-fill"></i></div>
+                <div><strong style="font-size:.875rem">European Quality</strong><br><span class="ts-body" style="font-size:.8rem">Best-in-class product standard</span></div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="ts-tech-icon-box" style="width:44px;height:44px;border-radius:10px;font-size:1.1rem;flex-shrink:0"><i class="bi bi-recycle"></i></div>
+                <div><strong style="font-size:.875rem">Eco-Friendly</strong><br><span class="ts-body" style="font-size:.8rem">Clean without chemicals. Buy once.</span></div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="ts-tech-icon-box" style="width:44px;height:44px;border-radius:10px;font-size:1.1rem;flex-shrink:0"><i class="bi bi-clock-fill"></i></div>
+                <div><strong style="font-size:.875rem">10-Year Boiler Warranty</strong><br><span class="ts-body" style="font-size:.8rem">On the stainless steel boiler</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <img src="images/warranty.png" alt="Thermostar Warranty" class="img-fluid" style="max-height:340px;filter:drop-shadow(0 16px 40px rgba(0,139,186,.18))">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     VIDEOS
+══════════════════════════════════════ -->
+<section id="videos" class="ts-section ts-section-light">
+  <div class="container-xl">
+    <div class="text-center mb-5 ts-reveal">
+      <span class="ts-label">See It In Action</span>
+      <h2 class="ts-h2">Thermostar Videos</h2>
+    </div>
+    <div class="row g-4 ts-reveal">
+      <div class="col-md-6 col-lg-4">
+        <a href="https://www.youtube.com/watch?v=I-EW48uhCjs" target="_blank" rel="noopener" class="ts-yt-thumb" aria-label="Watch Product Video on YouTube">
+          <img src="https://img.youtube.com/vi/I-EW48uhCjs/hqdefault.jpg" alt="Thermostar Product Video">
+          <div class="ts-yt-play"><i class="bi bi-play-fill"></i></div>
+        </a>
+        <div class="ts-video-lbl"><i class="bi bi-play-circle me-2" style="color:var(--ts-primary)"></i>Product Video</div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="https://www.youtube.com/watch?v=ulVEkMOlfdk" target="_blank" rel="noopener" class="ts-yt-thumb" aria-label="Watch Technology Video on YouTube">
+          <img src="https://img.youtube.com/vi/ulVEkMOlfdk/hqdefault.jpg" alt="Thermostar Technology Video">
+          <div class="ts-yt-play"><i class="bi bi-play-fill"></i></div>
+        </a>
+        <div class="ts-video-lbl"><i class="bi bi-play-circle me-2" style="color:var(--ts-primary)"></i>Technology Video</div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="https://www.youtube.com/watch?v=k1pI_k0mr-E" target="_blank" rel="noopener" class="ts-yt-thumb" aria-label="Watch Application Video on YouTube">
+          <img src="https://img.youtube.com/vi/k1pI_k0mr-E/hqdefault.jpg" alt="Thermostar Application Video">
+          <div class="ts-yt-play"><i class="bi bi-play-fill"></i></div>
+        </a>
+        <div class="ts-video-lbl"><i class="bi bi-play-circle me-2" style="color:var(--ts-primary)"></i>Application Video</div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="https://www.youtube.com/watch?v=P5JVIpSZ9t4" target="_blank" rel="noopener" class="ts-yt-thumb" aria-label="Watch Steam Iron Station Video on YouTube">
+          <img src="https://img.youtube.com/vi/P5JVIpSZ9t4/hqdefault.jpg" alt="Steam Iron Station Video">
+          <div class="ts-yt-play"><i class="bi bi-play-fill"></i></div>
+        </a>
+        <div class="ts-video-lbl"><i class="bi bi-play-circle me-2" style="color:var(--ts-primary)"></i>Steam Iron Station</div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="https://www.youtube.com/watch?v=u1yxe7DBXWY" target="_blank" rel="noopener" class="ts-yt-thumb" aria-label="Watch Training Video on YouTube">
+          <img src="https://img.youtube.com/vi/u1yxe7DBXWY/hqdefault.jpg" alt="Thermostar Training Video">
+          <div class="ts-yt-play"><i class="bi bi-play-fill"></i></div>
+        </a>
+        <div class="ts-video-lbl"><i class="bi bi-play-circle me-2" style="color:var(--ts-primary)"></i>Training Video</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     COMPANY — HISTORY & PHILOSOPHY
+══════════════════════════════════════ -->
+<section id="company" class="ts-section">
+  <div class="container-xl">
+    <div class="row g-5 align-items-start">
+      <!-- History -->
+      <div class="col-lg-6 ts-reveal">
+        <span class="ts-label">Our Story</span>
+        <h2 class="ts-h2">A Sustained Invention</h2>
+        <p class="ts-body">More than 30 years ago a pioneering invention was made in Italy — the land of steam. The foundation of modern Thermostar was a revolutionary boiler and an interchangeable heating element. Since then the product has continuously evolved with the times.</p>
+        <div class="mt-4">
+          <div class="ts-timeline-wrap">
+            <div class="d-flex gap-3 align-items-start mb-3">
+              <div style="min-width:60px;font-size:.72rem;font-weight:700;color:var(--ts-primary);text-transform:uppercase;letter-spacing:.1em;padding-top:.15rem">1989</div>
+              <div class="ts-body" style="font-size:.9rem">First Thermo-Cleaner launched — the beginning of a revolution in steam cleaning</div>
+            </div>
+            <div class="d-flex gap-3 align-items-start mb-3">
+              <div style="min-width:60px;font-size:.72rem;font-weight:700;color:var(--ts-primary);text-transform:uppercase;letter-spacing:.1em;padding-top:.15rem">2009</div>
+              <div class="ts-body" style="font-size:.9rem">Rebranded as <strong>THERMOSTAR</strong> — a name synonymous with dry steam excellence</div>
+            </div>
+            <div class="d-flex gap-3 align-items-start mb-3">
+              <div style="min-width:60px;font-size:.72rem;font-weight:700;color:var(--ts-primary);text-transform:uppercase;letter-spacing:.1em;padding-top:.15rem">2011+</div>
+              <div class="ts-body" style="font-size:.9rem">Portfolio expanded — accessories, mop systems, steam irons and more</div>
+            </div>
+            <div class="d-flex gap-3 align-items-start">
+              <div style="min-width:60px;font-size:.72rem;font-weight:700;color:var(--ts-primary);text-transform:uppercase;letter-spacing:.1em;padding-top:.15rem">Today</div>
+              <div class="ts-body" style="font-size:.9rem">100,000+ units sold worldwide. The smallest, fastest and strongest dry steam cleaner in its class</div>
+            </div>
+          </div>
+        </div>
+        <img src="images/thermostar-old.png" alt="Original Thermostar" class="img-fluid rounded-4 mt-4" style="max-height:200px;object-fit:contain;background:var(--ts-gray-light);padding:1.5rem;width:100%">
+      </div>
+      <!-- Philosophy -->
+      <div class="col-lg-6 ts-reveal ts-reveal-delay-2">
+        <span class="ts-label">Our Philosophy</span>
+        <h2 class="ts-h2">Products for Life</h2>
+        <div class="row g-3 align-items-center mb-4">
+          <div class="col-5">
+            <img src="images/philosophy.jpg" alt="Thermostar Philosophy" class="img-fluid rounded-4 w-100" style="object-fit:cover;height:220px">
+          </div>
+          <div class="col-7">
+            <p class="ts-body">Sometimes, just looking at people, one might get the impression that nature belongs to us. In reality, we are also just a part of it. The future belongs to our children.</p>
+            <p class="ts-body">Therefore, we at Thermostar try to prevent mountains of waste wherever possible — and we have found a way that makes sense both ecologically and economically.</p>
+          </div>
+        </div>
+        <p class="ts-body"><strong>Products for life only have to be bought once and disposed of once.</strong> Thermostar is not available through conventional retail channels — it is sold exclusively through selected authorised distributors to ensure the highest quality standard and extraordinary guarantee services.</p>
+        <img src="images/thermostar-testlabor.png" alt="Thermostar Test Lab" class="img-fluid mt-3" style="max-height:80px;opacity:.75">
+        <button class="ts-btn ts-btn-primary mt-4 d-flex" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+          Find Your Local Distributor
         </button>
       </div>
-      <div class="modal-body">
-        <!-- Nav pills -->
-  <ul class="nav nav-tabs nav-fill" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="pill" href="#amo">Animal Cages, Metal Grates and Other</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#bnt">Bathrooms and Toilets</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#bnm">Bicycles and Motorcycles</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#cec">Car Exterior Cleaning</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#cic">Car Interior Cleaning</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#cc">Carpet Cleaning</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#cfs">Carpet and Fabric Stains</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#cbf">Cleaning Bathroom Fixtures And Removing Calcium</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#cte">Cleaning The Entire Household</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#dc">Drain Cleaning</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#gf">Garden Furniture</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#gwc">Glass and Window Cleaning</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#jg">Joints/Grooves</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#kg">Kitchen Grease</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#ko">Kitchen Oven</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#l">Leather</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#mu">Mattresses and Upholstery</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#pvc">PVC and Floor Tiles</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#plf">Parquet and Laminate Flooring</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#p">Plants</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#pws">Polished Wood Surfaces</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#r">Radiators</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#td">Thawing and Defrosting</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#vb">Venetian Blinds</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#vh">Vent Hood</a>
-    </li>
-     <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#wts">Wall Tiles and Shower Stalls</a>
-    </li>
-      <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#wbj">Watch Bands and Jewellery</a>
-    </li>
-       <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#wfs">Window Frames and Shutters</a>
-    </li>
-        <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#wf">Wood Furniture</a>
-    </li>
-  </ul>
-<div class="container">
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div id="amo" class="container tab-pane active"><br>
-      <h3>Animal Cages, Metal Grates and Other</h3>
-    <p><strong>Instructions:</strong> Simply clean with the steam lance and wipe with a microfibre cloth.</p><p><strong>Level: </strong>Minimum to maximum steam</p><p><strong>Accessory: </strong>Steam Lance</p>
-	</div>
-    <div id="bnt" class="container tab-pane fade"><br>
-      <h3>Bathrooms and Toilets</h3>
-      <p><strong>Instructions:</strong> Large areas can be cleaned with the triangular or square brush and a clamped microfibre cloth; corners, slits and other inaccessible areas with the steam nozzle, with or without brushes. For the inner edges of the toilet, use the hot water function.</p><p><strong>Level: </strong>Minimum to maximum steam</p><p><strong>Accessory: </strong>Steam Lance, Triangular Brush and Rectangular Brush</p>
-	 </div>
-    <div id="bnm" class="container tab-pane fade"><br>
-      <h3>Bicycles and Motorcycles</h3>
-     <p><strong>Instructions:</strong> Clean with the steam lance and wipe with a microfibre cloth when complete.</p><p><strong>Level: </strong>Hot water, minimum to maximum steam</p><p><strong>Accessory: </strong>Steam Lance</p>
-    </div>
-    <div id="cec" class="container tab-pane fade"><br>
-      <h3>Car Exterior Cleaning</h3>
-    <p><strong>Instructions:</strong> If you decide to use a car wash, this does not mean that the car is completely clean afterwards. This often leaves a lot of stubborn dirt on the car, such as insects on the windscreen, bodywork or brake dirt on the rims. This is of course very unpleasant, and a waste of money when you can use the deep clean of Thermostar. So,we offer you the perfect alternative!</p><p>Reach for our modern dry steam cleaners. They clean with very hot, dry steam and your car will shine in splendour again with little time expenditure. With this system you don't have to worry about your paintwork as it is very gentle, and the stubborn stains will be no match for the steam, as you only need to use the steam nozzle from close radius for that aforementioned deep clean. After this, just wipe with a microfibre cloth and your car is clean again. </p><p><strong>Level: </strong>Minimum to maximum steam</p><p><strong>Accessory: </strong>Steam Lance or Bayonet Lance</p>
-    </div>
-    <div id="cic" class="container tab-pane fade"><br>
-      <h3>Car Interior Cleaning</h3>
-    <p><strong>Instructions: </strong>A proper car cleaning means the complete cleaning of the car. This includes not only the external washing of the car body but also the thorough cleaning of the interior surfaces. This is one of the cleaning procedures that takes a lot of time when washing the car. Especially car seats, whether upholstered with fabric or leather, need a thorough cleaning between again and again, because dust and dirt accumulates over time.</p><p>Vacuuming with a vacuum cleaner would be preferred, but this is only a superficial cleaning. The dirt that discolours the seat cushions is still stuck there. Also the trunk should not be forgotten when cleaning, however, this is also usually only vacuumed. </p><p>You can quickly and easily clean your car inside with our dry steam cleaners. The result is deep cleanliness with little effort. With the steam cleaner you can clean upholstery, carpets, door linings, plastic parts, dashboard, safety belts, headliners, glass, heating and ventilation outlets and everything is cleaned without problems down to the recesses. And you also save hours of cleaning!</p><p>We recommend that you take the triangular brush for normal soiling and clean the surfaces with a cloth clamped in it - for simple fabrics this can also be old towels without hesitation, but for leather and Alcantara we recommend microfibre cloths.</p><p><strong>Level: </strong>Maximum steam for cloth seats, minimum steam for leather and Alcantara.</p><p><strong>Accessory: </strong>Steam Lance and Triangular Brush</p>
-    </div>
-    <div id="cc" class="container tab-pane fade"><br>
-      <h3>Carpet Cleaning</h3>
-    <p><strong>Instructions</strong>: Who doesn’t know the pleasure of laying or buying the beautiful new carpet and admiring the fabulous choice? You are delighted to think how good it will look in your home, and how everything will look more welcoming. Yet the first stains start showing up with the daily use of the carpet - while children play on the carpet, and the dog runs on it with its wet nose and dirty paws, or something spills on the carpet. One already has the first stains on the carpet that was clean so far. Now you would ask yourself, how should I deal with this? Carpet cleaning companies come to your mind. You can take the carpet to them and get it back after cleaning. But these cleaning services are not cheap and suitable only for carpets, which are not laid or glued to the floor. So this option is very limited and expensive.</p><p>As a second option, you think of using a carpet foam for cleaning. But the use of carpet foam has its own problems and pitfalls. You have to wait for a long time to see the successful result, if you are successful at all. Before cleaning with foam, a thorough vacuuming must be done. And no one can walk on the carpet after it is sprayed. Isn’t this complicated and time consuming?</p><p>We now have good news for you. With our steam cleaner, your carpet cleaning job is much simpler! The carpet is cleaned effortlessly and thoroughly. You can clean your carpet easily with triangular or square brushes and a clamped microfibre cloth. We recommend you to do a trial cleaning first. Look for a hidden place and clean it to check the surface for colour resistance. If the carpet is fine and you don’t see any negative effects on it, you can start cleaning. You can also clean sensitive fabrics without any problem. To do this, just apply steam through the steam nozzle by holding it at a distance of 10 cm and then wipe off the surface with a microfibre cloth.</p><p><strong>Level: </strong>Maximum steam</p><p><strong>Accessory: </strong>Rectangular Brush and Extensions</p>
-    </div>
-    <div id="cfs" class="container tab-pane fade"><br>
-      <h3>Carpet and Fabric Stains</h3>
-    <p><strong>Instructions:</strong> Place the steam lance directly over the stain and move it quickly back and forth. Then wipe with a microfibre cloth. <em>ATTENTION:</em> First make sure that the material is suitable for steam cleaning. The structure of carpets, especially those made of wool, may be damaged during this type of treatment.</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Steam Lance</p>
-    </div>
-    <div id="cbf" class="container tab-pane fade"><br>
-      <h3>Cleaning Bathroom Fixtures And Removing Calcium</h3>
-    <p><strong>Instructions: </strong>You should use the steam lance and the round nylon brush with stainless steel wool. For larger calcium deposits, you should add a small amount of decalcifier (for example, vinegar or citric acid).</p><p><strong>Level: </strong>Minimum to maximum steam</p><p><strong>Accessory: </strong>Steam Lance, Nylon Brush and Stainless Steel Wool</p>
-    </div>
-    <div id="cte" class="container tab-pane fade"><br>
-      <h3>Cleaning The Entire Household</h3>
-    <p><strong>Instructions: </strong>Just clean everything with steam! Sparkling tiles, thoroughly cleaned carpets, spotless glass, sparkling glaze!</p><p>Everyone knows that a thorough cleaning of the household can be a tedious and time-consuming job. It is a strenuous activity, which must be carried out from time to time. One usually wears gloves to prevent the chemical cleaning agent from coming into contact with the skin. Just in case you don’t have gloves at home, you can expect dry and chapped skin on your hands. If you regularly bend down for your household work, you can also expect to suffer from backache. All this can now become a thing of the past. With the steam cleaner, household cleaning becomes a child’s play and your back will thank you. The phrase “letting off steam” has acquired a new meaning altogether.</p><p>The special thing about steam cleaning is that you can enjoy hygiene in your entire household and in fact, without chemicals. Let off steam in the kitchen and the bathroom, in the lobby, in living rooms and bedrooms, in the cellar and on the lofts – and the previous time-consuming cleaning task is completed twice as fast and easily. You can now save the time you previously used to invest in cleaning!</p><p>You can also clean the biggest dirt effortlessly using the thorough cleaning steam; without chemicals and quickly! Never will you forget a corner again, never will you get frustrated while cleaning again. You can clean your mattresses, upholstery or carpets easily right up to the floor and let your laminate shine again. The steam cleaner is suitable, not just for the household, but is ideal for cleaning the car as well.&nbsp;</p><p><strong>Accessory: </strong>Thermostar Dry Steam Cleaner</p>
-    </div>
-    <div id="dc" class="container tab-pane fade"><br>
-      <h3>Drain Cleaning</h3>
-    <p><strong>Instructions:</strong> Firstly, you should fill the drain with a little water, followed by placing the drain dome head over the drain. Close all overflow openings and flush the drain with hot water using short intervals.</p><p><strong>Level: </strong>Hot water</p><p><strong>Accessory: </strong>Drain Dome Head</p>
-    </div>
-    <div id="gf" class="container tab-pane fade"><br>
-      <h3>Garden Furniture</h3>
-    <p><strong>Instructions</strong>: Use the triangular brush with a cloth clamped in place, or the small triangular brush for stubborn dirt. For plastic furniture, place a microfibre cloth between the brush and the surface to be cleaned so as not to damage it.</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Triangular Brushes</p>
-    </div>
-    <div id="gwc" class="container tab-pane fade"><br>
-      <h3>Glass and Window Cleaning</h3>
-    <p><strong>Instructions:</strong> One of the most unpopular household chores is window cleaning. However, with Thermostar the application is very simple and the result is impressive. Simply dissolve the dirt with the steam nozzle and wipe with microfibre cloths. Of course, you can also use the triangular brush with the microfibre cloth clamped in, or you can use the special window cleaner and the special window cloth. Enjoy the advantages of our steam cleaner for your windows and other glass surfaces!</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Steam Lance, Triangular Brush and Steam Window Cleaner</p>
-    </div>
-    <div id="jg" class="container tab-pane fade"><br>
-      <h3>Joints/Grooves</h3>
-    <p><strong>Instructions:</strong> Use the round brass or nylon brushes as well as the extension tubes to relieve your back during work. Move slowly with the brush and with little pressure over the joints. This allows you to clean with more heat and less effort - and your brushes will last longer. Of course, you can also use the special joint brushes as well.</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Nylon, Brass and Joint Brushes</p>
-    </div>
-    <div id="kg" class="container tab-pane fade"><br>
-      <h3>Kitchen Grease</h3>
-    <p><strong>Instructions:</strong> Depending on the sensitivity of the surface to be treated, cleaning with a steam lance, a small round brass brush or a large nylon brush with stainless steel wool is recommended.</p><p><strong>Level: </strong>Maximum steam</p><p><strong>Accessory: </strong>Steam Lance, Brass Brush, Nylon Brush and Stainless Steel Wool</p>
-    </div>
-    <div id="ko" class="container tab-pane fade"><br>
-      <h3>Kitchen Oven</h3>
-    <p><strong>Instructions</strong>: Oven cleaning has always been tiresome. Nobody likes to do it because it is awkward and you usually have to work on your knees. The dirt is burned in by the heat in the oven mostly also already very strongly and can be removed only with difficulty. </p><p>The Thermostar Dry Steam Cleaner can also help here. The hot steam dissolves any stain, no matter how burnt in. Use the round nylon brush with the stainless steel wool. For stubborn stains, move the brush up and down on the affected area with pressure and for a little longer until the stain has dissolved as a result of the heat.</p><p>The result is a radiantly clean oven that matches the shiny rest of your kitchen. Stubborn, burnt-in stains are therefore yesterday's news! </p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Stainless Steel Wool and Nylon Brush</p>
-    </div>
-    <div id="l" class="container tab-pane fade"><br>
-      <h3>Leather</h3>
-    <p><strong>Instructions:</strong> Leather cleaning is a delicate subject for many people. You shouldn't use sharp cleaning agents here! Leather needs gentle cleaning and care. With the Thermostar Dry Steam Cleaner, gentle cleaning is possible even with leather. Simply clean with the triangular or square brush and clamped microfibre cloth. Only operate the steam switch occasionally (do not hold it continuously). Old or brittle leather should not be cleaned, and after cleaning it is recommended to apply a leather protective agent.</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Triangular Brush or Rectangular Brush</p>
-    </div>
-    <div id="mu" class="container tab-pane fade"><br>
-      <h3>Mattresses and Upholstery</h3>
-    <p><strong>Instructions:</strong> Clean with a triangular or square brush and a clamped microfibre cloth. Always carry out a test clean on a concealed spot first to check the colour resistance of the surfaces. For sensitive fabrics, steam with the steam nozzle from a distance of 10cm and then wipe the surfaces with a microfibre cloth.</p><p><strong>Level: </strong>Maximum steam</p><p><strong>Accessory: </strong>Triangular Brush or Rectangular Brush</p>
-    </div>
-    <div id="pvc" class="container tab-pane fade"><br>
-      <h3>PVC and Floor Tiles</h3>
-    <p><strong>Instructions:</strong> Tiles are usually laid on the grounds that they are easy to clean and require less effort than parquet, laminate or carpet flooring. But tiles are not always really easier to clean.</p><p>Simply clean your tiles with our steam cleaner and use the triangular or square brush with a clamped microfibre cloth. This will make your tiles shine and shine again quickly and easily. The intelligent technology of our steam cleaners kills bacteria and germs, dissolves fats and lime and all this gently and with very dry steam and completely without chemicals. You can also clean your grooves without any problems, so that they shine again in their original splendour. The time you spent with a sponge or toothbrush on the floor are now over!</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Triangular Brush or Rectangular Brush</p>
-    </div>
-    <div id="plf" class="container tab-pane fade"><br>
-      <h3>Parquet and Laminate Flooring</h3>
-    <p><strong>Instructions:</strong> Laminate and parquet are among the most popular floors, which is probably due to the fact that they are extremely easy to clean. Time and time again&nbsp;it is warned that laminate and parquet should not be cleaned with steam cleaner, since the floors are damaged thereby and thus one tries to remove the stains with little water, gentle cleaning agents and much expenditure from the floors.</p><p>If properly used with steam, parquet and laminates will not be damaged. Due to the intelligent technology and the multitude of accessories of Thermostar, our steam cleaners are ideally equipped for cleaning laminate and parquet. With the square brush and the clamped microfibre cloth you can clean your parquet and laminate easily, quickly and effortlessly. The cleaning is done with little humidity, therefore you only need to press the steam switch from time to time and you can start cleaning. The result is shiny cleanliness and even surfaces to be cleaned are treated better and more gently with micro steam than with wet wiping or standard steam cleaners!</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Rectangular Brush and Extensions</p>
-    </div>
-     <div id="p" class="container tab-pane fade"><br>
-      <h3>Plants</h3>
- <p><strong>Instructions:</strong> Steam the plants with the steam lance from a distance of 40 to 50 cm. From this distance the steam is no longer hot, but pleasantly cool and will easily remove dust.</p><p><strong>Level: </strong>Maximum steam</p><p><strong>Accessory: </strong>Steam Lance or Bayonet Lance</p>   
-    </div>
-      <div id="pws" class="container tab-pane fade"><br>
-      <h3>Polished Wood Surfaces</h3>
-    <p><strong>Instructions:</strong> Treat waxed wood very carefully, without pressure. It is best to use towels to clean after using the Thermostar as the microfibre cloths can clean very thoroughly and remove the wax layer, so therefore are not suitable.</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Steam Lance</p>
-    </div>
-       <div id="r" class="container tab-pane fade"><br>
-      <h3>Radiators</h3>
-    <p><strong>Instructions:</strong> Clean the radiators from above with the steam lance. The dust is collected and can be wiped off at the bottom.</p><p><strong>Level: </strong>Maximum steam</p><p><strong>Accessory: </strong>Steam Lance</p>
-    </div>
-        <div id="td" class="container tab-pane fade"><br>
-      <h3>Thawing and Defrosting</h3>
-    <p><strong>Instructions: </strong>Simply, you should attach the steam lance with the steam scraper and smoothly clean the frosted areas in your fridge. This will gently thaw the ice and you can defrost your fridge in a controlled manner.</p><p><strong>﻿Level: </strong>Maximum steam</p><p><strong>Accessory: </strong>Steam Scraper</p>
-    </div>
-         <div id="vb" class="container tab-pane fade"><br>
-      <h3>Venetian Blinds</h3>
-    <p><strong>Instructions:</strong> Venetian blinds are sensitive. Therefore, steam on individually with little pressure and then wipe off with a microfibre cloth.</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Steam Lance</p>
-    </div>
-          <div id="vh" class="container tab-pane fade"><br>
-      <h3>Vent Hood</h3>
-    <p><strong>Instructions</strong>: Use the steam lance to clean the grease filter. Blow through the filter with maximum steam. For the extractor hood, use the steam lance and wipe with a microfibre cloth. If the surfaces are suitable, you can also clean the corners with the small nylon brush. It is that simple!</p><p><strong>Level: </strong>Minimum to maximum steam</p><p><strong>Accessory: </strong>Steam Lance and Small Nylon Brush</p>
-    </div>
-          <div id="wts" class="container tab-pane fade"><br>
-      <h3>Wall Tiles and Shower Stalls</h3>
- <p>In case of heavy calcium deposits on glass doors and wall tiles, we recommend an initial application of vinegar or citric acid, then allow these chemicals to settle for around 20 minutes. Continue to clean surfaces with steam nozzle and micro-fibre cloth or triangular brush with inserted micro-fibre cloth. You can clean any joints and grooves using the round nylon or brass brush. To remove stubborn stains you can also use the round nylon brush with stainless steel wool immediately on the glass.</p><p><br></p><p><strong>Level - </strong>Minimum to maximum steam</p><p><strong>Accessory - </strong>Steam Lance, Triangular Brush and Joint Brushes</p>
-    </div>
-          <div id="wbj" class="container tab-pane fade"><br>
-      <h3>Watch Bands and Jewellery</h3>
-    <p><strong>Instructions: </strong>Place jewellery or watch straps on a microfibre cloth and clean and polish at close range using the steam nozzle. ATTENTION: Please steam only onto the watch strap and not directly onto the watch case!</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Steam Lance</p>
-    </div>
-          <div id="wfs" class="container tab-pane fade"><br>
-      <h3>Window Frames and Shutters</h3>
-  <p><strong>Instructions:</strong> For cleaning, use either the steam lance (wipe with microfibre cloth) or the large triangular brush with clamped cloth. <em>ATTENTION:</em> With wooden frames, apply only a little moisture/steam and do not hold the tip of the steam lance too close to the wood.</p><p><strong>Level: </strong>Minimum steam</p><p><strong>Accessory: </strong>Steam Lance and Triangular Brush</p>  
-    </div>
-          <div id="wf" class="container tab-pane fade"><br>
-      <h3>Wood Furniture</h3>
- <p><strong>Instructions:</strong> Steam from a slightly greater distance with the steam lance and wipe immediately with a microfibre cloth. The cleaning takes a little more time, but is all the more gentle.</p><p><strong>Level: </strong>Minimum steam, with an even steam clean</p><p><strong>Accessory: </strong>Steam Lance</p>   
     </div>
   </div>
-</div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SOCIAL / FOLLOW
+══════════════════════════════════════ -->
+<section class="ts-section-sm ts-section-light">
+  <div class="container-xl">
+    <div class="text-center mb-4 ts-reveal">
+      <span class="ts-label">Follow Us</span>
+      <h3 class="ts-h2" style="font-size:1.6rem">Stay Connected</h3>
+      <!-- LinkedIn note: LinkedIn no longer provides a public feed widget for static sites.
+           The cards below link directly to our social profiles. -->
+    </div>
+    <div class="row g-3 justify-content-center ts-reveal">
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="https://www.linkedin.com/company/thermostar-uk-viridian-alliance/" target="_blank" rel="noopener" class="text-decoration-none">
+          <div class="ts-social-card">
+            <span class="ts-social-icon ts-li-color"><i class="bi bi-linkedin"></i></span>
+            <div class="ts-social-name">LinkedIn</div>
+            <div class="ts-social-handle">Follow us</div>
+          </div>
+        </a>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="https://www.facebook.com/thermostar.uk" target="_blank" rel="noopener" class="text-decoration-none">
+          <div class="ts-social-card">
+            <span class="ts-social-icon ts-fb-color"><i class="bi bi-facebook"></i></span>
+            <div class="ts-social-name">Facebook</div>
+            <div class="ts-social-handle">thermostar.uk</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="https://www.instagram.com/thermostar.uk" target="_blank" rel="noopener" class="text-decoration-none">
+          <div class="ts-social-card">
+            <span class="ts-social-icon ts-ig-color"><i class="bi bi-instagram"></i></span>
+            <div class="ts-social-name">Instagram</div>
+            <div class="ts-social-handle">thermostar.uk</div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
-    <div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     CTA STRIP
+══════════════════════════════════════ -->
+<section class="ts-cta-strip">
+  <div class="container-xl text-center ts-reveal">
+    <h2 class="ts-cta-title">Ready to Experience<br>Cleanliness for a Lifetime?</h2>
+    <p class="ts-cta-sub mx-auto mt-3">Book a free home demonstration. No obligation — we come to you and show you just how effective Thermostar really is.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+      <button class="ts-btn ts-btn-outline-white ts-btn-lg" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+        Book Free Demo
+      </button>
+      <a href="tel:+442035448303" class="ts-btn ts-btn-lg" style="border:2px solid rgba(255,255,255,.4);color:#fff;border-radius:50px;background:transparent">
+        <i class="bi bi-telephone-fill me-2"></i>Call Us Now
+      </a>
     </div>
-    </div>
-            </div>
-</div>
-<!-- end -->
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
 <footer>
-<div class="container-fluid">
- <div class="row">
-  <div class="col text-center">
-  <p  ><a href="#contactus" data-toggle="modal" data-target="#ContactUs">Contact us</a>:<br>
-  VIRIDIAN ALLIANCE LTD<br>
-Registred in England and Wales<br>
-No 08871798<br>
-Cumberland House<br>
-80 Scrubs Lane<br>
-London<br>
-NW10 6RF<br>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-</svg> Tel: <a href="tel:+442035448303">+44 (0) 203 544 8303</a><br>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-</svg> Email: <a href="mailto:info@thermostar.org.uk">info@thermostar.org.uk</a>
-  </p>
-  </div>
-</div>
-<div class="row justify-content-center">
-  <div class="col-auto">
-    <a href="mailto:info@thermostar.org.uk"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-    </svg></a>
+  <div class="container-xl">
+    <div class="row g-5">
+      <!-- Brand + contact -->
+      <div class="col-lg-4">
+        <img src="images/logo.png" alt="Thermostar" class="footer-logo mb-3">
+        <p>VIRIDIAN ALLIANCE LTD<br>
+        Registered in England &amp; Wales · No 08871798<br>
+        Cumberland House, 80 Scrubs Lane<br>
+        London NW10 6RF</p>
+        <p class="mt-3">
+          <a href="tel:+442035448303"><i class="bi bi-telephone-fill me-2" style="color:var(--ts-primary)"></i>+44 (0) 203 544 8303</a><br>
+          <a href="mailto:info@thermostar.org.uk" class="mt-1 d-inline-block"><i class="bi bi-envelope-fill me-2" style="color:var(--ts-primary)"></i>info@thermostar.org.uk</a>
+        </p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://www.linkedin.com/company/thermostar-uk-viridian-alliance/" target="_blank" rel="noopener" class="footer-social-link"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.facebook.com/thermostar.uk" target="_blank" rel="noopener" class="footer-social-link"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/thermostar.uk" target="_blank" rel="noopener" class="footer-social-link"><i class="bi bi-instagram"></i></a>
+          <a href="tel:+442035448303" class="footer-social-link"><i class="bi bi-telephone-fill"></i></a>
+          <a href="mailto:info@thermostar.org.uk" class="footer-social-link"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <div class="col-6 col-lg-2">
+        <div class="footer-h">Products</div>
+        <p><a href="#products">Avantgarde S4</a></p>
+        <p><a href="#products">Professional S4</a></p>
+        <p><a href="accessories/">Accessories</a></p>
+        <p><a href="#applications">Applications</a></p>
+        <p><a href="#technology">Technology</a></p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-h">Company</div>
+        <p><a href="#company">Our History</a></p>
+        <p><a href="#company">Philosophy</a></p>
+        <p><a href="#warranty">Warranty</a></p>
+        <p><a href="#videos">Videos</a></p>
+        <p><button class="ts-btn ts-btn-sm" style="border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.55);background:transparent;border-radius:50px;cursor:pointer;font-family:inherit" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</button></p>
+      </div>
+      <!-- Downloads -->
+      <div class="col-lg-4">
+        <div class="footer-h">User Manuals</div>
+        <a href="documents/thermostar_users_guide.pdf" target="_blank" class="ts-dl-link">
+          <i class="bi bi-file-earmark-pdf-fill"></i>
+          <span>Thermostar User Guide</span>
+          <i class="bi bi-download ms-auto opacity-50"></i>
+        </a>
+        <a href="documents/thermostar_steam_iron_user_manual.pdf" target="_blank" class="ts-dl-link">
+          <i class="bi bi-file-earmark-pdf-fill"></i>
+          <span>Steam Iron Manual</span>
+          <i class="bi bi-download ms-auto opacity-50"></i>
+        </a>
+        <a href="documents/thermostar_steam_iron_station_user_manual.pdf" target="_blank" class="ts-dl-link">
+          <i class="bi bi-file-earmark-pdf-fill"></i>
+          <span>Steam Ironing Station Manual</span>
+          <i class="bi bi-download ms-auto opacity-50"></i>
+        </a>
+      </div>
     </div>
-  <div class="col-auto">
-<a href="http://facebook.com/thermostar.uk" target="blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-<path fill-rule="evenodd" d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-</svg></a>
-</div>
-<div class="col-auto">
-<a href="http://instargram.com/thermostar.uk" target="blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-</svg></a>
-</div>
-<div class="col-auto  ">
-<a href="https://www.linkedin.com/company/thermostar-uk-viridian-alliance/" target="blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-<path fill-rule="evenodd" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212h-2.4s.03-6.547 0-7.225h2.4v1.023a5.54 5.54 0 0 0-.016.025h.016v-.025c.32-.493.89-1.193 2.165-1.193 1.58 0 2.764 1.033 2.764 3.252v4.143h-2.4V9.529c0-.972-.348-1.634-1.217-1.634-.664 0-1.059.447-1.233.878-.063.154-.079.37-.079.586v4.035z"/>
-</svg></a></p>
-</div>
-<div class="col-auto  ">
-  <a href="tel:+442035448303"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-  </svg></a></p>
-  </div>
-</div>
+    <hr class="footer-divider">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <span class="footer-copy">&copy; 2026 Viridian Alliance Ltd · Thermostar UK · All rights reserved</span>
+      <span class="footer-copy">Thermostar® is a registered trademark</span>
+    </div>
   </div>
 </footer>
-<!-- modal # link -->
- <script>
-$(document).ready(function() {
-$('.popup').click(openModalPopupClick);
 
-      function openModalPopup(){
-        var hashText = window.location.hash.substr();
-        if (hashText){
-          $(hashText).modal('show');
-        }
-      }
 
-      openModalPopup();
+<!-- ══════════════════════════════════════
+     ENQUIRY MODAL
+     Uses web3forms.com for submission.
+     ➜ Register free at https://web3forms.com
+     ➜ Replace YOUR_WEB3FORMS_ACCESS_KEY below
+══════════════════════════════════════ -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background:var(--ts-dark)">
+        <h5 class="modal-title" id="enquiryModalLabel" style="color:#fff;font-weight:700">
+          <i class="bi bi-calendar-check me-2" style="color:#4dd9ff"></i>Book a Free Demonstration
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter:invert(1) brightness(2)"></button>
+      </div>
+      <div class="modal-body" style="padding:2rem">
+        <p style="font-size:.875rem;color:var(--ts-gray);margin-bottom:1.5rem">
+          We come to you — a free home demonstration with no obligation. You'll see exactly how powerful Thermostar really is, and we'll bring a thank-you gift.
+        </p>
+        <form id="enquiryForm" method="POST" action="https://api.web3forms.com/submit">
+          <!-- Replace with your web3forms access key from https://web3forms.com -->
+          <input type="hidden" name="access_key" value="cd6020fd-dfd1-48e5-bd5b-069449ebda88">
+          <input type="hidden" name="subject" value="Thermostar Demo / Enquiry">
+          <input type="hidden" name="from_name" value="Thermostar UK Website">
+          <input type="hidden" name="product" id="modalProduct" value="">
+          <input type="hidden" name="redirect" value="false">
 
-      function openModalPopupClick(){
-        var hashText = $(this).attr('href');
-        if (hashText){
-          $(hashText).modal('show');
-        }
-      }
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="ts-field">
+                <label for="f-name">Full Name *</label>
+                <input type="text" id="f-name" name="name" class="ts-input" placeholder="Jane Smith" required pattern="^[A-Za-zÀ-ÿ\s'\-]+$">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ts-field">
+                <label for="f-phone">Phone *</label>
+                <input type="tel" id="f-phone" name="phone" class="ts-input" placeholder="+44 7700 900000" required pattern="^\+?[0-9\s\-\(\)]+$">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ts-field">
+                <label for="f-email">Email *</label>
+                <input type="email" id="f-email" name="email" class="ts-input" placeholder="jane@example.com" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ts-field">
+                <label for="f-postcode">Postcode</label>
+                <input type="text" id="f-postcode" name="postcode" class="ts-input" placeholder="NW10 6RF">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="ts-field">
+                <label for="f-msg">Message (optional)</label>
+                <textarea id="f-msg" name="message" class="ts-input" placeholder="Any questions or specific interests..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <label class="ts-consent">
+            <input type="checkbox" required>
+            <span>I consent to Viridian Alliance Ltd processing my personal data to respond to this enquiry. <a href="mailto:info@thermostar.org.uk" style="color:var(--ts-primary)">Privacy enquiries</a>.</span>
+          </label>
+
+          <button type="submit" class="ts-btn ts-btn-primary w-100 mt-3" id="enquirySubmit" style="justify-content:center">
+            <i class="bi bi-send-fill me-2"></i>Send Enquiry
+          </button>
+
+          <div class="ts-form-msg ts-form-ok" id="formOk">
+            <i class="bi bi-check-circle-fill me-2"></i>Thank you! We'll be in touch shortly to arrange your free demonstration.
+          </div>
+          <div class="ts-form-msg ts-form-err" id="formErr">
+            <i class="bi bi-exclamation-circle-fill me-2"></i>Something went wrong. Please try again or call us on <a href="tel:+442035448303">020 3544 8303</a>.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+/* ── Navbar scroll effect ── */
+const nav = document.getElementById('mainNav');
+function updateNav() {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
+
+/* ── Set product in modal when triggered from a product button ── */
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('[data-product]');
+  if (btn) {
+    document.getElementById('modalProduct').value = btn.dataset.product || '';
+  }
 });
- </script>
- <script>
-   //When ever the modal is shown the below code will execute.
-$(".modal").on("shown.bs.modal", function()  {
-    var urlReplace = "#" + $(this).attr('id'); 
-    history.pushState(null, null, urlReplace); 
+
+/* ── Application card toggle ── */
+function toggleApp(card) {
+  const wasOpen = card.classList.contains('open');
+  document.querySelectorAll('.ts-app-card.open').forEach(c => {
+    c.classList.remove('open');
+    c.querySelector('.ts-app-detail-box').style.display = 'none';
   });
+  if (!wasOpen) {
+    card.classList.add('open');
+    card.querySelector('.ts-app-detail-box').style.display = 'block';
+  }
+}
 
-  // This code gets executed when the back button is clicked, hide any/open modals.
-  $(window).on('popstate', function() { 
-    $(".modal").modal('hide');
+/* ── Enquiry form submission (web3forms) ── */
+document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('enquirySubmit');
+  const ok  = document.getElementById('formOk');
+  const err = document.getElementById('formErr');
+  const orig = btn.innerHTML;
+  btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending…';
+  btn.disabled = true;
+  ok.style.display = 'none';
+  err.style.display = 'none';
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(this)
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      ok.style.display = 'block';
+      this.reset();
+    } else {
+      err.style.display = 'block';
+    }
+  } catch {
+    err.style.display = 'block';
+  } finally {
+    btn.innerHTML = orig;
+    btn.disabled = false;
+  }
+});
+
+/* ── Scroll reveal ── */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
   });
+}, { threshold: 0.12 });
+document.querySelectorAll('.ts-reveal').forEach(el => observer.observe(el));
+</script>
 
-  $("#ProductVideo").on('hidden.bs.modal', function (e) {
-    $("#ProductVideo iframe").attr("src", $("#ProductVideo iframe").attr("src"));
-});
-
-$("#TechnologyVideo").on('hidden.bs.modal', function (e) {
-    $("#TechnologyVideo iframe").attr("src", $("#TechnologyVideo iframe").attr("src"));
-});
-
-$("#ApplicationVideo").on('hidden.bs.modal', function (e) {
-    $("#ApplicationVideo iframe").attr("src", $("#ApplicationVideo iframe").attr("src"));
-});
-
-$("#SteamIronVideo").on('hidden.bs.modal', function (e) {
-    $("#SteamIronVideo iframe").attr("src", $("#SteamIronVideo iframe").attr("src"));
-});
-
-$("#TrainingVideo").on('hidden.bs.modal', function (e) {
-    $("#TrainingVideo iframe").attr("src", $("#TrainingVideo iframe").attr("src"));
-});
- </script>
 </body>
+</html>
