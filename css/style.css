@@ -640,6 +640,42 @@ footer p { margin-bottom: .4rem; line-height: 1.65; }
 .ts-dl-link:hover { background: rgba(255,255,255,.1); color: #fff; }
 .ts-dl-link i { color: var(--ts-primary); font-size: 1.1rem; flex-shrink: 0; }
 
+/* ── LOGO COIN FLIP ── */
+.ts-logo-flip {
+  perspective: 600px;
+  display: inline-block;
+  text-decoration: none;
+}
+.ts-logo-inner {
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+  height: 46px;
+}
+.ts-logo-face {
+  height: 46px;
+  width: auto;
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.ts-logo-back-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+@keyframes ts-coin-spin-in {
+  0%   { transform: rotateY(0deg); }
+  55%  { transform: rotateY(210deg); }
+  100% { transform: rotateY(180deg); }
+}
+@keyframes ts-coin-spin-out {
+  0%   { transform: rotateY(180deg); }
+  55%  { transform: rotateY(-30deg); }
+  100% { transform: rotateY(0deg); }
+}
+
 /* ── SCROLL REVEAL ── */
 .ts-reveal {
   opacity: 0;
