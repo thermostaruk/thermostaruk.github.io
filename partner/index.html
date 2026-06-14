@@ -189,8 +189,11 @@
 ══════════════════════════════════════ -->
 <nav class="navbar navbar-expand-lg fixed-top scrolled" id="mainNav">
   <div class="container-xl">
-    <a class="navbar-brand" href="../">
-      <img src="../images/logo.png" alt="Thermostar" height="46">
+    <a class="navbar-brand ts-logo-flip" href="https://medicleantec.co.uk" target="_blank" rel="noopener" aria-label="Go to Mediclean UK">
+      <div class="ts-logo-inner">
+        <img src="../images/logo.png" alt="Thermostar" height="46" class="ts-logo-face ts-logo-front-face">
+        <img src="https://medicleantec.com/imgs/png/logo.png" alt="Mediclean" height="46" class="ts-logo-face ts-logo-back-face">
+      </div>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -660,6 +663,31 @@ document.getElementById('partnerForm').addEventListener('submit', async function
   } catch { err.style.display = 'block'; }
   finally { btn.innerHTML = orig; btn.disabled = false; }
 });
+
+/* ── Logo coin flip ── */
+const logoFlip = document.querySelector('.ts-logo-flip');
+const logoInner = document.querySelector('.ts-logo-inner');
+if (logoFlip && logoInner) {
+  const isTouch = () => window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+  let touchFlipped = false;
+  logoFlip.addEventListener('mouseenter', () => {
+    if (!isTouch()) logoInner.style.animation = 'ts-coin-spin-in 0.65s ease-out forwards';
+  });
+  logoFlip.addEventListener('mouseleave', () => {
+    if (!isTouch()) logoInner.style.animation = 'ts-coin-spin-out 0.65s ease-out forwards';
+  });
+  logoFlip.addEventListener('click', (e) => {
+    if (isTouch() && !touchFlipped) {
+      e.preventDefault();
+      touchFlipped = true;
+      logoInner.style.animation = 'ts-coin-spin-in 0.65s ease-out forwards';
+      setTimeout(() => {
+        logoInner.style.animation = 'ts-coin-spin-out 0.65s ease-out forwards';
+        touchFlipped = false;
+      }, 3000);
+    }
+  });
+}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
